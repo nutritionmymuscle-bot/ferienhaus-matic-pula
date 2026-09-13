@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /mentions-legales.html
+Disallow: /confidentialite.html
+Disallow: /conditions.html
+
+Sitemap: https://www.ferienhaus-matic-pula.com/sitemap.xml
