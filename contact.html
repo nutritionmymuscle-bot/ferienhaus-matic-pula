@@ -74,6 +74,10 @@
       <div class="booking-panel">
         <h3 data-i18n="contact.formTitle"></h3>
         <form id="contactForm" novalidate>
+          <div class="visually-hidden" aria-hidden="true" style="position:absolute;left:-9999px;">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-field">
             <label for="fullName" data-i18n="contact.nameLabel"></label>
             <input type="text" id="fullName" name="fullName" autocomplete="name">
@@ -192,7 +196,7 @@
 <script src="js/translations.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/form-utils.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous"></script>
 <script src="js/emailjs-config.js"></script>
 <script src="js/contact-form.js"></script>
 <script src="js/main.js"></script>

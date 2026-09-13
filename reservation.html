@@ -127,6 +127,10 @@
         <span class="kicker" data-i18n="reservation.formKicker"></span>
         <h3 data-i18n="reservation.formTitle"></h3>
         <form id="bookingForm" novalidate>
+          <div class="visually-hidden" aria-hidden="true" style="position:absolute;left:-9999px;">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-grid">
             <div class="form-field">
               <label for="firstName" data-i18n="reservation.firstNameLabel"></label>
@@ -258,7 +262,7 @@
 <script src="js/availability-config.js"></script>
 <script src="js/calendar.js"></script>
 <script src="js/form-utils.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous"></script>
 <script src="js/emailjs-config.js"></script>
 <script src="js/booking-form.js"></script>
 <script src="js/main.js"></script>

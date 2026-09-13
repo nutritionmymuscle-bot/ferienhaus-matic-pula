@@ -14,6 +14,14 @@ function initBookingForm() {
     evt.preventDefault();
     const lang = getCurrentLang();
     const dict = TRANSLATIONS[lang].reservation;
+
+    // Piège à robots : ce champ est invisible pour un humain, seul un bot le remplit.
+    if (getFieldValue(form, "website")) {
+      showNotice(notice, "success", dict.successMessage);
+      form.reset();
+      return;
+    }
+
     let valid = true;
 
     ["firstName", "lastName", "email"].forEach((name) => {
