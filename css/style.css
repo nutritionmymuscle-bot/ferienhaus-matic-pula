@@ -228,8 +228,8 @@ p { margin: 0 0 1em; }
   padding: calc(var(--header-height) + 64px) 0 96px;
   color: #fff;
   background:
-    linear-gradient(180deg, rgba(11,61,85,0.82), rgba(11,61,85,0.78)),
-    repeating-linear-gradient(135deg, #123f57 0px, #123f57 40px, #0e3548 40px, #0e3548 80px);
+    linear-gradient(160deg, rgba(11,61,85,0.88), rgba(11,61,85,0.72) 55%, rgba(11,61,85,0.9)),
+    url("../images/maison-piscine/photo-04.png") center 30%/cover no-repeat;
   margin-top: calc(var(--header-height) * -1);
 }
 .page-hero h1 { color: #fff; font-size: clamp(2rem, 4.5vw, 3rem); }
@@ -335,6 +335,12 @@ p { margin: 0 0 1em; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .gallery-grid .img-placeholder { cursor: default; }
 .gallery-item[hidden] { display: none; }
+.gallery-item { border-radius: var(--radius-md); overflow: hidden; }
+.gallery-item img { transition: transform 0.5s ease; }
+.gallery-item:hover img { transform: scale(1.06); }
+
+.room-card img { transition: transform 0.5s ease; }
+.room-card:hover img { transform: scale(1.04); }
 
 /* -------------------------------- Testimonials ---------------------------------- */
 .testimonial-card {
