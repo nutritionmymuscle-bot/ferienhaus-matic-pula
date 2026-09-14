@@ -3,3 +3,6 @@ node_modules/
 Thumbs.db
 
 .vercel
+
+# Contient les URL iCal privées Airbnb/Booking.com une fois renseignées (jetons dans le lien) — ne pas publier.
+scripts/ical-sources.json
