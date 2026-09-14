@@ -4,7 +4,7 @@
    des attributs data-i18n / data-i18n-placeholder / data-i18n-aria-label.
    ========================================================================== */
 
-const SUPPORTED_LANGS = ["fr", "de", "en", "hr"];
+const SUPPORTED_LANGS = ["de", "en", "hr"];
 const DEFAULT_LANG = "de";
 const LANG_STORAGE_KEY = "fhm_lang";
 
@@ -13,13 +13,12 @@ function resolveKey(obj, key) {
   return key.split(".").reduce((acc, part) => (acc && acc[part] !== undefined ? acc[part] : undefined), obj);
 }
 
-/** Traduit une clé pour la langue donnée, avec repli EN puis FR puis la clé brute. */
+/** Traduit une clé pour la langue donnée, avec repli EN puis la clé brute. */
 function t(key, lang) {
   const currentLang = lang || getCurrentLang();
   const dict = TRANSLATIONS[currentLang];
   let value = dict ? resolveKey(dict, key) : undefined;
   if (value === undefined) value = resolveKey(TRANSLATIONS.en, key);
-  if (value === undefined) value = resolveKey(TRANSLATIONS.fr, key);
   if (value === undefined) return key;
   return value;
 }

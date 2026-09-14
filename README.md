@@ -3,7 +3,7 @@
 Site multipage pour la location de la **Villa Ferienhaus Matić Pula** (Pula – Istrie, Croatie) : une villa istrienne rénovée divisée en **3 appartements indépendants** — **Appartement 1**, **Appartement 2** et **Appartement 3** — chacun avec 2 ou 3 chambres et un salon, réservables séparément, autour d'une **piscine privée commune**.
 
 - 12 pages : Accueil, À propos, Nos appartements, Galerie, Réservation, Localisation, Avis clients, FAQ, Contact, Mentions légales, Confidentialité, Conditions générales
-- 4 langues : Français, Deutsch, English, Hrvatski (sélecteur en haut à droite, mémorisé automatiquement)
+- 3 langues : Deutsch, English, Hrvatski (sélecteur en haut à droite, mémorisé automatiquement)
 - **3 appartements réservables séparément**, chacun avec son propre calendrier, ses propres tarifs et ses propres disponibilités
 - Calendrier de réservation avec **calcul automatique du prix** (nuits × tarif saisonnier + frais de ménage), par appartement
 - Formulaire de réservation qui **t'envoie un email** avec toutes les infos remplies par le client, y compris l'appartement demandé (via EmailJS)
@@ -99,7 +99,7 @@ En plus de l'email que **toi** tu reçois, le site peut aussi envoyer automatiqu
    {{client_message}}
    ```
 
-   Le site construit automatiquement `client_message` dans la langue du client (clés `reservation.clientConfirmationBody` et `contact.clientConfirmationBody` dans [`js/translations.js`](js/translations.js) si tu veux modifier le texte) — un seul template EmailJS suffit donc pour les 4 langues.
+   Le site construit automatiquement `client_message` dans la langue du client (clés `reservation.clientConfirmationBody` et `contact.clientConfirmationBody` dans [`js/translations.js`](js/translations.js) si tu veux modifier le texte) — un seul template EmailJS suffit donc pour les 3 langues.
 4. Note l'**ID de ce template** et ajoute-le dans [`js/emailjs-config.js`](js/emailjs-config.js) :
 
    ```js
@@ -208,7 +208,7 @@ Si tu loues aussi tes appartements sur Airbnb, Booking.com ou une autre platefor
 
 Sur `reservation.html`, trois onglets (Appartement 1 / 2 / 3) permettent au client de choisir l'appartement à réserver — chacun a son propre calendrier, ses propres disponibilités et son propre prix. Depuis la page `appartement.html`, chaque bouton "Réserver" ouvre directement `reservation.html?apt=1` (ou `2`, `3`) pour présélectionner le bon onglet.
 
-Pour renommer les appartements (par exemple si tu préfères leur donner un nom propre plutôt qu'un numéro), modifie uniquement `TRANSLATIONS.<langue>.apartments.apt1.name` (et `apt2`, `apt3`) dans [`js/translations.js`](js/translations.js), dans les 4 langues — le nom est ensuite repris automatiquement partout sur le site (onglets, cartes, emails).
+Pour renommer les appartements (par exemple si tu préfères leur donner un nom propre plutôt qu'un numéro), modifie uniquement `TRANSLATIONS.<langue>.apartments.apt1.name` (et `apt2`, `apt3`) dans [`js/translations.js`](js/translations.js), dans les 3 langues — le nom est ensuite repris automatiquement partout sur le site (onglets, cartes, emails).
 
 ---
 
@@ -245,17 +245,17 @@ Si l'adresse change un jour :
 1. Va sur [Google Maps](https://maps.google.com), recherche la nouvelle adresse.
 2. Clique sur **Partager** → **Intégrer une carte** → copie le lien qui commence par `https://www.google.com/maps/embed?...` (ou utilise simplement `https://www.google.com/maps?q=ADRESSE&output=embed`, sans clé API).
 3. Ouvre `localisation.html` (et `index.html` pour la mini-carte), remplace la valeur de `src` de la balise `<iframe>` par ce lien.
-4. Mets aussi à jour l'adresse affichée en texte dans [`js/translations.js`](js/translations.js) (clé `location.addressValue`, dans les 4 langues), le lien du bouton « Voir sur Google Maps » dans `localisation.html`, et l'adresse dans le JSON-LD de `index.html`.
+4. Mets aussi à jour l'adresse affichée en texte dans [`js/translations.js`](js/translations.js) (clé `location.addressValue`, dans les 3 langues), le lien du bouton « Voir sur Google Maps » dans `localisation.html`, et l'adresse dans le JSON-LD de `index.html`.
 
 ---
 
 ## 7. Modifier les textes, tarifs affichés ou témoignages
 
-Tout le texte du site (dans les 4 langues) est centralisé dans [`js/translations.js`](js/translations.js). Chaque page utilise des clés (`data-i18n="reservation.title"` par exemple) qui pointent vers ce fichier — il n'y a donc qu'un seul endroit à modifier pour changer un texte dans les 4 langues.
+Tout le texte du site (dans les 3 langues) est centralisé dans [`js/translations.js`](js/translations.js). Chaque page utilise des clés (`data-i18n="reservation.title"` par exemple) qui pointent vers ce fichier — il n'y a donc qu'un seul endroit à modifier pour changer un texte dans les 3 langues.
 
 Les témoignages se trouvent dans `TRANSLATIONS.<langue>.testimonials.list` — ajoute, retire ou modifie les entrées (`name`, `country`, `rating` de 1 à 5, `text`).
 
-Les questions de la FAQ se trouvent dans `TRANSLATIONS.<langue>.faq.list` — ajoute, retire ou modifie les entrées (`q` pour la question, `a` pour la réponse) ; l'accordéon sur `faq.html` s'actualise automatiquement, dans les 4 langues.
+Les questions de la FAQ se trouvent dans `TRANSLATIONS.<langue>.faq.list` — ajoute, retire ou modifie les entrées (`q` pour la question, `a` pour la réponse) ; l'accordéon sur `faq.html` s'actualise automatiquement, dans les 3 langues.
 
 ---
 
@@ -278,17 +278,17 @@ Un bouton flottant WhatsApp apparaît en bas à droite de chaque page. Pour qu'i
 1. Ouvre [`js/main.js`](js/main.js).
 2. Remplace la valeur de `WHATSAPP_PHONE` par ton numéro au format international, sans "+" ni espaces (ex. `"491793590317"` pour `+49 179 3590317`). C'est déjà configuré avec le numéro du propriétaire.
 
-Le message pré-rempli est traduit automatiquement dans les 4 langues (clé `common.whatsappMessage` dans [`js/translations.js`](js/translations.js)).
+Le message pré-rempli est traduit automatiquement dans les 3 langues (clé `common.whatsappMessage` dans [`js/translations.js`](js/translations.js)).
 
 ---
 
 ## 10. Compléter les pages juridiques (obligatoire avant mise en ligne)
 
-Le site inclut 3 pages juridiques modèles, dans les 4 langues : **Mentions légales** (`mentions-legales.html`), **Politique de confidentialité** (`confidentialite.html`) et **Conditions générales** (`conditions.html`), ainsi qu'une **bannière de consentement cookies** liée à la page de confidentialité.
+Le site inclut 3 pages juridiques modèles, dans les 3 langues : **Mentions légales** (`mentions-legales.html`), **Politique de confidentialité** (`confidentialite.html`) et **Conditions générales** (`conditions.html`), ainsi qu'une **bannière de consentement cookies** liée à la page de confidentialité.
 
 ⚠️ **Ces pages sont des modèles génériques, pas des documents juridiquement validés.** Avant la mise en ligne :
 
-1. Dans [`js/translations.js`](js/translations.js), remplace dans les 4 langues les champs entre crochets de `legal.editorText` (nom du propriétaire, adresse, numéro OIB, téléphone, email) et `legal.hostingText` (nom de l'hébergeur choisi).
+1. Dans [`js/translations.js`](js/translations.js), remplace dans les 3 langues les champs entre crochets de `legal.editorText` (nom du propriétaire, adresse, numéro OIB, téléphone, email) et `legal.hostingText` (nom de l'hébergeur choisi).
 2. Relis et adapte les clés `terms.depositText` et `terms.cancellationText` : les pourcentages d'acompte et le barème d'annulation indiqués sont des valeurs par défaut à ajuster selon ta politique réelle.
 3. Fais relire l'ensemble par un professionnel (avocat, comptable) — notamment l'Impressum si tu t'adresses à une clientèle germanophone, soumis à des règles strictes en Allemagne/Autriche.
 
@@ -324,7 +324,7 @@ Ferienhaus-Matic-Pula/
 ├── css/
 │   └── style.css            Design system (couleurs, typographie, composants)
 ├── js/
-│   ├── translations.js      Tous les textes du site, en 4 langues (dont apartments.apt1/2/3, legal, privacy, terms)
+│   ├── translations.js      Tous les textes du site, en 3 langues (dont apartments.apt1/2/3, legal, privacy, terms)
 │   ├── i18n.js               Moteur de traduction
 │   ├── main.js                Navigation, témoignages, filtres galerie, ⚙️ numéro WhatsApp, bannière cookies
 │   ├── pricing-config.js      ⚙️ Tarifs par appartement et par saison (à modifier)

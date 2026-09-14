@@ -181,6 +181,7 @@ p { margin: 0 0 1em; }
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
 .lang-switcher { display: flex; }
+.lang-switcher--mobile { display: none; }
 .lang-switcher select {
   border: 1.5px solid var(--color-border); background: var(--color-sand); cursor: pointer;
   padding: 8px 14px; border-radius: 999px;
@@ -665,9 +666,11 @@ p { margin: 0 0 1em; }
     border-bottom: 1px solid var(--color-border);
   }
   .site-header.is-open .main-nav a { font-size: 0.95rem; padding: 12px 16px; white-space: normal; }
-  .site-header.is-open .header-actions .lang-switcher {
-    display: flex; position: absolute; top: calc(var(--header-height) + 1px); right: 16px;
+  .lang-switcher--mobile {
+    display: flex; width: 100%; margin-top: 8px; padding-top: 12px;
+    border-top: 1px solid var(--color-border);
   }
+  .lang-switcher--mobile select { flex: 1; text-align: center; text-align-last: center; }
 }
 
 @media (max-width: 960px) {

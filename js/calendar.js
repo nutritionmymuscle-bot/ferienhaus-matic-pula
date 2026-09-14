@@ -5,7 +5,7 @@
    disponibilités (voir js/pricing-config.js et js/availability-config.js).
    ========================================================================== */
 
-const LOCALE_MAP = { fr: "fr-FR", de: "de-DE", en: "en-GB", hr: "hr-HR" };
+const LOCALE_MAP = { de: "de-DE", en: "en-GB", hr: "hr-HR" };
 
 function getInitialApartmentId() {
   const params = new URLSearchParams(window.location.search);
