@@ -11,7 +11,7 @@
 
 const EMAILJS_CONFIG = {
   publicKey: "669t_gxeSBBZGnUU0",
-  serviceId: "service_6z63grt",
+  serviceId: "service_clmqmeu",
   templateId: "template_89ng6br",
 
   // Optionnel — 2e template EmailJS pour envoyer une confirmation
