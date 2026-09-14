@@ -2,18 +2,19 @@
 <html lang="de">
 <head>
 <meta charset="UTF-8">
+<script>(function(){try{var t=localStorage.getItem('fhm_theme');if(t!=='light'&&t!=='dark'){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ferienhaus Matić Pula — Villa de 3 appartements avec piscine à Pula</title>
-<meta name="description" content="Ferienhaus Matić Pula — villa de 3 appartements indépendants (2 chambres + salon) avec piscine commune à Pula, Istrie. Réservation en ligne, calcul automatique du prix.">
+<title>Ferienhaus Matić Pula — Maison de 3 appartements avec piscine à Pula</title>
+<meta name="description" content="Ferienhaus Matić Pula — maison de 3 appartements indépendants (2 chambres + salon) avec piscine commune à Pula, Istrie. Réservation en ligne, calcul automatique du prix.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ferienhaus Matić Pula">
-<meta property="og:title" content="Ferienhaus Matić Pula — Villa de 3 appartements avec piscine à Pula">
-<meta property="og:description" content="Villa istrienne divisée en 3 appartements indépendants (Appartement 1, 2, 3) avec piscine commune. Réservation en ligne et calcul automatique du prix.">
+<meta property="og:title" content="Ferienhaus Matić Pula — Maison de 3 appartements avec piscine à Pula">
+<meta property="og:description" content="Maison istrienne divisée en 3 appartements indépendants (Appartement 1, 2, 3) avec piscine commune. Réservation en ligne et calcul automatique du prix.">
 <meta property="og:image" content="https://www.ferienhaus-matic-pula.com/images/og-cover.jpg">
 <meta property="og:url" content="https://www.ferienhaus-matic-pula.com/index.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ferienhaus Matić Pula — Villa de 3 appartements avec piscine à Pula">
-<meta name="twitter:description" content="Villa istrienne divisée en 3 appartements indépendants avec piscine commune à Pula, Istrie.">
+<meta name="twitter:title" content="Ferienhaus Matić Pula — Maison de 3 appartements avec piscine à Pula">
+<meta name="twitter:description" content="Maison istrienne divisée en 3 appartements indépendants avec piscine commune à Pula, Istrie.">
 <meta name="twitter:image" content="https://www.ferienhaus-matic-pula.com/images/og-cover.jpg">
 <link rel="canonical" href="https://www.ferienhaus-matic-pula.com/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +27,7 @@
   "@context": "https://schema.org",
   "@type": "LodgingBusiness",
   "name": "Ferienhaus Matić Pula",
-  "description": "Villa istrienne divisée en 3 appartements indépendants (Appartement 1, 2, 3) avec piscine privée commune, chacun avec 2 ou 3 chambres, un salon et une cuisine équipée.",
+  "description": "Maison istrienne divisée en 3 appartements indépendants (Appartement 1, 2, 3) avec piscine privée commune, chacun avec 2 ou 3 chambres, un salon et une cuisine équipée.",
   "url": "https://www.ferienhaus-matic-pula.com/index.html",
   "telephone": "+491793590317",
   "priceRange": "€€",
@@ -79,6 +80,10 @@
         </select>
       </div>
       <a href="reservation.html" class="btn btn--primary" data-i18n="common.bookNow"></a>
+      <button type="button" class="theme-toggle" data-theme-toggle aria-pressed="false" data-i18n-aria-label="common.themeToggleLabel">
+        <svg class="theme-toggle-icon theme-toggle-icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2.5M12 19v2.5M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2.5 12H5M19 12h2.5M4.2 19.8L6 18M18 6l1.8-1.8"/></svg>
+        <svg class="theme-toggle-icon theme-toggle-icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </div>
@@ -144,7 +149,7 @@
 
   <section class="section section--sand">
     <div class="container grid grid--2" style="align-items:center;">
-      <img src="images/appartement-3/photo-05.png" alt="Salon confortable de l'un des appartements de la villa" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-md);">
+      <img src="images/appartement-3/photo-05.png" alt="Salon confortable de l'un des appartements de la maison" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-md);">
       <div>
         <span class="kicker" data-i18n="home.aboutTeaserKicker"></span>
         <h2 class="section-title" data-i18n="home.aboutTeaserTitle"></h2>
@@ -262,6 +267,7 @@
 
 <script src="js/translations.js"></script>
 <script src="js/i18n.js"></script>
+<script src="js/theme.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

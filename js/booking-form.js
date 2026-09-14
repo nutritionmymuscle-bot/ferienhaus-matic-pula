@@ -74,7 +74,7 @@ function initBookingForm() {
       nights: booking.nights,
       price_per_night: `${booking.pricePerNight} ${booking.currency}`,
       subtotal: `${booking.subtotal} ${booking.currency}`,
-      cleaning_fee: `${booking.cleaningFee} ${booking.currency}`,
+      cleaning_fee: "",
       total_price: `${booking.total} ${booking.currency}`,
       message: getFieldValue(form, "message"),
       lang,

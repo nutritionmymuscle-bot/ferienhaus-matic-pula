@@ -9,7 +9,7 @@
    au-delà de ce nombre, jusqu'à l'occupation maximale ("maxOccupancy").
 
    Exemple Appartement 1 : basePrice 180€ pour 6 personnes, extraGuestFee
-   50€ → 230€ pour 7 personnes, 280€ pour 8 personnes (maxOccupancy).
+   40€ → 220€ pour 7 personnes, 260€ pour 8 personnes (maxOccupancy).
    ========================================================================== */
 
 const PRICING_CONFIG = {
@@ -18,30 +18,27 @@ const PRICING_CONFIG = {
   apartments: {
     apt1: {
       // Appartement 1 — 3 chambres, jusqu'à 6+2 personnes
-      cleaningFee: 35,
       minNights: 2,
       basePrice: 180,
       baseOccupancy: 6,
       maxOccupancy: 8,
-      extraGuestFee: 50
+      extraGuestFee: 40
     },
     apt2: {
       // Appartement 2 — 3 chambres, jusqu'à 6+2 personnes
-      cleaningFee: 40,
       minNights: 2,
       basePrice: 180,
       baseOccupancy: 6,
       maxOccupancy: 8,
-      extraGuestFee: 50
+      extraGuestFee: 40
     },
     apt3: {
-      // Appartement 3 — 2 chambres, jusqu'à 4+1 personnes
-      cleaningFee: 35,
+      // Appartement 3 — 2 chambres, jusqu'à 4+2 personnes
       minNights: 2,
       basePrice: 130,
       baseOccupancy: 4,
-      maxOccupancy: 5,
-      extraGuestFee: 50
+      maxOccupancy: 6,
+      extraGuestFee: 40
     }
   }
 };

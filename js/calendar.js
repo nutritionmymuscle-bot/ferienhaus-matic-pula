@@ -154,7 +154,7 @@ function updateSummary() {
   const guestCount = getGuestCount();
   const pricePerNight = getPricePerNight(apartmentId, guestCount);
   const subtotal = pricePerNight * nights;
-  const total = subtotal + aptConfig.cleaningFee;
+  const total = subtotal;
   const currency = PRICING_CONFIG.currency;
 
   breakdownEl.hidden = false;
@@ -168,7 +168,6 @@ function updateSummary() {
     <div class="price-line"><span>${dict.nightsLabel}</span><span class="value">${nights}</span></div>
     <div class="price-line"><span>${dict.pricePerNightLabel}</span><span class="value">${pricePerNight} ${currency}</span></div>
     <div class="price-line"><span>${dict.subtotalLabel}</span><span class="value">${subtotal} ${currency}</span></div>
-    <div class="price-line"><span>${dict.cleaningFeeLabel}</span><span class="value">${aptConfig.cleaningFee} ${currency}</span></div>
     <div class="price-line total"><span>${dict.totalLabel}</span><span class="value">${total} ${currency}</span></div>
     ${belowMinNights ? `<div class="form-notice form-notice--error" style="margin-top:14px;">${dict.minNightsNotice.replace("{n}", aptConfig.minNights)}</div>` : ""}
     ${overCapacity ? `<div class="form-notice form-notice--error" style="margin-top:14px;">${dict.maxOccupancyNotice.replace("{n}", aptConfig.maxOccupancy)}</div>` : ""}
@@ -182,7 +181,6 @@ function updateSummary() {
     nights,
     subtotal,
     pricePerNight,
-    cleaningFee: aptConfig.cleaningFee,
     total,
     currency,
     valid: isValid,

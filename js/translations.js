@@ -8,7 +8,7 @@ const TRANSLATIONS = {
   /* ============================== FRANÇAIS ============================== */
   fr: {
     meta: {
-      home: "Ferienhaus Matić Pula — Villa de 3 appartements avec piscine commune à Pula, Istrie",
+      home: "Ferienhaus Matić Pula — Maison de 3 appartements avec piscine commune à Pula, Istrie",
       about: "À propos — Ferienhaus Matić Pula",
       apartment: "Nos appartements — Ferienhaus Matić Pula",
       gallery: "Galerie photos — Ferienhaus Matić Pula",
@@ -28,7 +28,7 @@ const TRANSLATIONS = {
       callUs: "Appelez-nous",
       emailUs: "Écrivez-nous",
       addressShort: "Pula, Istrie, Croatie",
-      footerAbout: "Villa de charme divisée en trois appartements indépendants avec piscine commune, à quelques minutes des plages et du centre historique de Pula. Un accueil familial, un confort moderne et l'authenticité de l'Istrie.",
+      footerAbout: "Maison de charme divisée en trois appartements indépendants avec piscine commune, à quelques minutes des plages et du centre historique de Pula. Un accueil familial, un confort moderne et l'authenticité de l'Istrie.",
       footerLinksTitle: "Liens rapides",
       footerContactTitle: "Contact",
       footerRights: "Ferienhaus Matić Pula. Tous droits réservés.",
@@ -40,7 +40,8 @@ const TRANSLATIONS = {
       cookieBannerLearnMore: "En savoir plus",
       whatsappCta: "Discuter sur WhatsApp",
       whatsappMessage: "Bonjour, je suis intéressé(e) par une réservation au Ferienhaus Matić Pula.",
-      faqTeaser: "Une question ? Consultez notre FAQ"
+      faqTeaser: "Une question ? Consultez notre FAQ",
+      themeToggleLabel: "Basculer entre thème clair et thème sombre"
     },
     nav: {
       home: "Accueil",
@@ -56,7 +57,7 @@ const TRANSLATIONS = {
     home: {
       heroKicker: "Istrie · Croatie",
       heroTitle: "Ferienhaus Matić Pula",
-      heroSubtitle: "Villa de 3 appartements indépendants avec piscine commune, à deux pas des plages et du vieux Pula",
+      heroSubtitle: "Maison de vacances 3 appartements indépendants avec piscine commune, à deux pas des plages et les sites historiques",
       heroCta: "Vérifier les disponibilités",
       heroCta2: "Découvrir l'appartement",
       trustBadge1: "Réponse sous 24h",
@@ -74,7 +75,7 @@ const TRANSLATIONS = {
       highlight4Title: "Wifi & climatisation",
       highlight4Text: "Connexion fibre gratuite, climatisation dans chaque pièce et cuisine entièrement équipée.",
       aboutTeaserKicker: "L'appartement",
-      aboutTeaserTitle: "Trois appartements, tout le confort d'une vraie villa",
+      aboutTeaserTitle: "Trois appartements, tout le confort d'une vraie maison",
       aboutTeaserText: "Trois appartements avec salon, cuisine équipée, une ou deux salles de bain modernes et accès à des espaces extérieurs pensés pour se détendre en famille ou entre amis.",
       aboutTeaserCta: "Voir tous les détails",
       testimonialsTeaserKicker: "Ils nous ont fait confiance",
@@ -91,7 +92,7 @@ const TRANSLATIONS = {
     apartment: {
       kicker: "Découvrir",
       title: "Nos 3 appartements",
-      introText: "Le Ferienhaus Matić Pula est une villa istrienne entièrement rénovée, divisée en trois appartements indépendants avec piscine privée — Appartement 1, Appartement 2 et Appartement 3 — chacun avec sa propre configuration de 2 ou 3 chambres, un salon et une cuisine équipée. Un ensemble parfait pour séjourner ensemble tout en gardant son indépendance.",
+      introText: "Le Ferienhaus Matić Pula est une maison istrienne entièrement rénovée, divisée en trois appartements indépendants avec piscine privée — Appartement 1, Appartement 2 et Appartement 3 — chacun avec sa propre configuration de 2 ou 3 chambres, un salon et une cuisine équipée. Un ensemble parfait pour séjourner ensemble tout en gardant son indépendance.",
       roomsKicker: "Nos 3 appartements",
       roomsTitle: "Trois appartements, chacun avec ses chambres, son salon et sa cuisine équipée",
       room1Title: "Chambre — Appartement 1",
@@ -101,7 +102,7 @@ const TRANSLATIONS = {
       room3Title: "Chambre — Appartement 3",
       room3Text: "Chambre lumineuse avec vue sur le jardin, literie premium et rangements spacieux.",
       capacityTitle: "Jusqu'à 8 personnes selon l'appartement",
-      capacityText: "Les Appartements 1 et 2 accueillent jusqu'à 6 personnes (+2 en supplément possible), l'Appartement 3 jusqu'à 4 personnes (+1 en supplément possible) — idéal pour un couple, une famille, ou plusieurs appartements réservés ensemble entre amis.",
+      capacityText: "Les Appartements 1 et 2 accueillent jusqu'à 6 personnes (+2 en supplément possible), l'Appartement 3 jusqu'à 4 personnes (+2 en supplément possible) — idéal pour un couple, une famille, ou plusieurs appartements réservés ensemble entre amis.",
       amenitiesKicker: "Équipements",
       amenitiesTitle: "Tout est pensé pour votre confort",
       amenity1: "Piscine commune extérieure",
@@ -121,7 +122,7 @@ const TRANSLATIONS = {
       amenity15: "Thermomètre corporel",
       amenity16: "Masques de visage gratuits",
       amenity17: "Désinfectant pour les mains",
-      viewPhotos: "Voir les photos",
+      viewPhotos: "Voir plus de photos",
       rulesKicker: "Informations pratiques",
       rulesTitle: "Bon à savoir avant votre arrivée",
       checkIn: "Arrivée à partir de 15h00",
@@ -168,8 +169,20 @@ const TRANSLATIONS = {
         tagline: "Le plus calme, accès direct au jardin",
         bedroomsText: "2 chambres climatisées",
         salonText: "Salon avec cuisine équipée et 1 salle de bain",
-        capacityText: "Jusqu'à 4 personnes (+1 en option)",
+        capacityText: "Jusqu'à 4 personnes (+2 en option)",
         reserveButton: "Réserver l'appartement 3"
+      },
+      equipment: {
+        title: "✨ Équipements inclus :",
+        item1: "Cuisine entièrement équipée",
+        item2: "🏊 Piscine privée",
+        item3: "🍖 Espace barbecue",
+        item4: "🅿️ Parking privé",
+        item5: "📶 Wi-Fi gratuit",
+        item6: "🎮 Console PS5",
+        linenNote: "Des serviettes et du linge de lit sont fournis.",
+        readMore: "Voir plus",
+        readLess: "Voir moins"
       }
     },
     reservation: {
@@ -193,7 +206,6 @@ const TRANSLATIONS = {
       priceBreakdownTitle: "3. Votre prix",
       pricePerNightLabel: "Prix par nuit",
       subtotalLabel: "Sous-total séjour",
-      cleaningFeeLabel: "Frais de ménage",
       totalLabel: "Total",
       selectDatesPrompt: "Sélectionnez une date d'arrivée puis une date de départ dans le calendrier ci-dessus pour calculer votre prix.",
       maxOccupancyNotice: "Capacité maximale pour cet appartement : {n} personnes.",
@@ -230,7 +242,7 @@ const TRANSLATIONS = {
       introText: "Le Ferienhaus Matić Pula est situé au sud-ouest de la ville de Pula, en Istrie. Ce quartier bénéficie d'une situation géographique idéale qui combine la proximité de la mer et des plages avec un accès facile au centre-ville historique.",
       addressLabel: "Adresse",
       addressValue: "Uskočka ulica 46, 52100 Pula, Croatie",
-      addressNote: "Adresse exacte de la villa — retrouvez-nous facilement grâce à la carte ci-dessus.",
+      addressNote: "Adresse exacte de la maison — retrouvez-nous facilement grâce à la carte ci-dessus.",
       viewOnMapsButton: "Voir sur Google Maps",
       mapCaption: "Cliquez et glissez sur la carte pour explorer les environs.",
       distancesTitle: "Distances utiles",
@@ -268,7 +280,17 @@ const TRANSLATIONS = {
         { name: "Sophie & James", country: "Royaume-Uni", rating: 5, text: "Wonderful stay from start to finish. The host was incredibly responsive and the pool area was our favourite spot every evening." },
         { name: "Ivana K.", country: "Croatie", rating: 5, text: "Savršeno mjesto za obiteljski odmor. Bazen, vrt i blizina plaže — sve je bilo baš kako je opisano, toplo preporučujem." },
         { name: "Laura & Marco", country: "Italie", rating: 4, text: "Casa spaziosa e ben curata, piscina privata fantastica. Un piccolo consiglio: portate repellente per insetti la sera in giardino." },
-        { name: "Els & Peter", country: "Belgique", rating: 5, text: "Appartement impeccable, literie très confortable et accueil chaleureux. L'endroit idéal pour découvrir l'Istrie en famille." }
+        { name: "Els & Peter", country: "Belgique", rating: 5, text: "Appartement impeccable, literie très confortable et accueil chaleureux. L'endroit idéal pour découvrir l'Istrie en famille." },
+        { name: "Familie Berger", country: "Autriche", rating: 5, text: "Wir haben eine wunderschöne Woche in Pula verbracht. Die Wohnung war blitzsauber und der Pool ein Traum für unsere Kinder. Wir kommen definitiv wieder!" },
+        { name: "Anke & Sven", country: "Pays-Bas", rating: 5, text: "Een fantastische plek om te ontspannen. Het appartement was ruim en goed uitgerust, en het zwembad was heerlijk na een dag op het strand." },
+        { name: "Nicolas & Élodie", country: "Suisse", rating: 5, text: "Séjour parfait en amoureux. L'appartement était impeccable et la terrasse avec vue sur le jardin absolument charmante." },
+        { name: "Carlos & Marta", country: "Espagne", rating: 4, text: "Un lugar muy tranquilo y bien situado, cerca de la playa y del centro de Pula. Volveríamos sin duda." },
+        { name: "Katarzyna W.", country: "Pologne", rating: 5, text: "Piękny apartament, bardzo czysto i cicho. Basen był strzałem w dziesiątkę dla naszych dzieci. Polecam każdemu!" },
+        { name: "Ana & Luka", country: "Slovénie", rating: 5, text: "Odlično mesto za oddih z družino. Bazen je bil odličen, apartma pa zelo udoben in čist." },
+        { name: "Petra & Tomáš", country: "République tchèque", rating: 5, text: "Nádherný pobyt, apartmán byl přesně jako na fotkách. Bazén a zahrada byly skvělé pro odpočinek po celém dni." },
+        { name: "Erik & Linnea", country: "Suède", rating: 5, text: "En underbar vecka i Istrien. Lägenheten var rymlig och ren, och poolen var perfekt för barnen." },
+        { name: "Conor & Aoife", country: "Irlande", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
+        { name: "Zsófia & Bence", country: "Hongrie", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
     },
     contact: {
@@ -343,7 +365,7 @@ const TRANSLATIONS = {
       bookingProcessTitle: "Processus de réservation",
       bookingProcessText: "Toute demande envoyée via le formulaire de réservation est une demande préalable, non une confirmation immédiate. La réservation n'est définitive qu'après confirmation écrite du propriétaire, généralement sous 24 heures.",
       pricesTitle: "Prix",
-      pricesText: "Les prix affichés sont en euros (€), par nuit, et varient selon la saison et l'appartement choisi. Ils incluent les frais de ménage indiqués dans le récapitulatif de prix. Toute demande particulière peut faire l'objet d'un supplément convenu au préalable.",
+      pricesText: "Les prix affichés sont en euros (€), par nuit, et varient selon la saison, l'appartement choisi et le nombre de personnes. Toute demande particulière peut faire l'objet d'un supplément convenu au préalable.",
       depositTitle: "Acompte, solde et caution",
       depositText: "Un acompte peut être demandé pour confirmer la réservation, le solde étant réglé à l'arrivée. Une caution est également demandée à l'arrivée et restituée au départ, déduction faite d'éventuels dommages constatés.",
       cancellationTitle: "Annulation",
@@ -367,8 +389,8 @@ const TRANSLATIONS = {
       list: [
         { q: "Quels sont les horaires d'arrivée et de départ ?", a: "L'arrivée est possible à partir de 15h00 et le départ doit se faire avant 10h00. Ces horaires nous permettent de préparer soigneusement l'appartement entre chaque séjour." },
         { q: "Puis-je arriver tard le soir ou très tôt le matin ?", a: "Oui, indiquez-le simplement dans le champ message du formulaire de réservation : nous nous organisons pour vous accueillir ou vous remettre les clés en autonomie si nécessaire." },
-        { q: "La piscine est-elle privée ou partagée entre les appartements ?", a: "La piscine est commune aux trois appartements de la villa (Appartement 1, Appartement 2 et Appartement 3). Elle est entourée de transats et d'un coin ombragé pour tous les hôtes présents." },
-        { q: "Combien de personnes chaque appartement peut-il accueillir ?", a: "Les Appartements 1 et 2 disposent de 3 chambres et accueillent jusqu'à 6 personnes (+2 en supplément possible). L'Appartement 3 dispose de 2 chambres et accueille jusqu'à 4 personnes (+1 en supplément possible). Si vous êtes un grand groupe, vous pouvez réserver plusieurs appartements en même temps." },
+        { q: "La piscine est-elle privée ou partagée entre les appartements ?", a: "La piscine est commune aux trois appartements de la maison (Appartement 1, Appartement 2 et Appartement 3). Elle est entourée de transats et d'un coin ombragé pour tous les hôtes présents." },
+        { q: "Combien de personnes chaque appartement peut-il accueillir ?", a: "Les Appartements 1 et 2 disposent de 3 chambres et accueillent jusqu'à 6 personnes (+2 en supplément possible). L'Appartement 3 dispose de 2 chambres et accueille jusqu'à 4 personnes (+2 en supplément possible). Si vous êtes un grand groupe, vous pouvez réserver plusieurs appartements en même temps." },
         { q: "Les animaux de compagnie sont-ils acceptés ?", a: "Oui, sur demande préalable uniquement. Merci de nous en informer avant de réserver via le formulaire de contact." },
         { q: "Une caution est-elle demandée ?", a: "Oui, une caution est demandée à l'arrivée et restituée intégralement au départ, déduction faite d'éventuels dommages constatés." },
         { q: "Comment se passe le paiement ?", a: "Un acompte est demandé pour confirmer la réservation, le solde étant réglé à l'arrivée. Le détail complet figure dans nos conditions générales." },
@@ -384,10 +406,10 @@ const TRANSLATIONS = {
     about: {
       kicker: "À propos",
       title: "L'histoire du Ferienhaus Matić",
-      introText: "Une villa familiale rénovée avec soin et divisée en trois appartements indépendants, pour faire découvrir l'authenticité de l'Istrie à nos hôtes venus du monde entier.",
+      introText: "Une maison familiale rénovée avec soin et divisée en trois appartements indépendants, pour faire découvrir l'authenticité de l'Istrie à nos hôtes venus du monde entier.",
       storyKicker: "Notre histoire",
-      storyTitle: "Une villa istrienne devenue trois appartements de vacances",
-      storyText: "Le Ferienhaus Matić est né de la rénovation complète d'une villa familiale aux portes de Pula, divisée en trois appartements indépendants — Appartement 1, Appartement 2 et Appartement 3 — chacun avec 2 chambres et un salon. Nous avons voulu conserver l'âme du lieu — pierre locale, tuiles traditionnelles, oliviers du jardin — tout en offrant un confort résolument moderne : piscine commune, kitchenette équipée et climatisation dans chaque appartement. Depuis, nous avons le plaisir d'accueillir des familles et des couples venus de toute l'Europe pour découvrir la douceur de vivre istrienne.",
+      storyTitle: "Une maison istrienne devenue trois appartements de vacances",
+      storyText: "Le Ferienhaus Matić est né de la rénovation complète d'une maison familiale aux portes de Pula, divisée en trois appartements indépendants — Appartement 1, Appartement 2 et Appartement 3 — chacun avec 2 chambres et un salon. Nous avons voulu conserver l'âme du lieu — pierre locale, tuiles traditionnelles, oliviers du jardin — tout en offrant un confort résolument moderne : piscine commune, kitchenette équipée et climatisation dans chaque appartement. Depuis, nous avons le plaisir d'accueillir des familles et des couples venus de toute l'Europe pour découvrir la douceur de vivre istrienne.",
       hostKicker: "Vos hôtes",
       hostTitle: "La famille Matić vous accueille",
       hostText: "Nous vivons à quelques minutes de l'appartement et restons disponibles tout au long de votre séjour : conseils sur les restaurants, les plages ou les excursions, remise des clés en main propre et un accueil chaleureux à votre arrivée.",
@@ -448,7 +470,8 @@ const TRANSLATIONS = {
       cookieBannerLearnMore: "Mehr erfahren",
       whatsappCta: "Auf WhatsApp chatten",
       whatsappMessage: "Hallo, ich interessiere mich für eine Buchung im Ferienhaus Matić Pula.",
-      faqTeaser: "Eine Frage? Sehen Sie sich unsere FAQ an"
+      faqTeaser: "Eine Frage? Sehen Sie sich unsere FAQ an",
+      themeToggleLabel: "Zwischen hellem und dunklem Modus wechseln"
     },
     nav: {
       home: "Startseite",
@@ -509,7 +532,7 @@ const TRANSLATIONS = {
       room3Title: "Schlafzimmer — Wohnung 3",
       room3Text: "Helles Zimmer mit Gartenblick, hochwertige Betten und viel Stauraum.",
       capacityTitle: "Platz für bis zu 8 Personen, je nach Wohnung",
-      capacityText: "Wohnung 1 und 2 bieten Platz für bis zu 6 Personen (+2 gegen Aufpreis möglich), Wohnung 3 für bis zu 4 Personen (+1 gegen Aufpreis möglich) — ideal für ein Paar, eine Familie, oder mehrere gemeinsam gebuchte Wohnungen unter Freunden.",
+      capacityText: "Wohnung 1 und 2 bieten Platz für bis zu 6 Personen (+2 gegen Aufpreis möglich), Wohnung 3 für bis zu 4 Personen (+2 gegen Aufpreis möglich) — ideal für ein Paar, eine Familie, oder mehrere gemeinsam gebuchte Wohnungen unter Freunden.",
       amenitiesKicker: "Ausstattung",
       amenitiesTitle: "Alles für Ihren Komfort",
       amenity1: "Gemeinsamer Außenpool",
@@ -529,7 +552,7 @@ const TRANSLATIONS = {
       amenity15: "Fieberthermometer",
       amenity16: "Kostenlose Gesichtsmasken",
       amenity17: "Handdesinfektionsmittel",
-      viewPhotos: "Fotos ansehen",
+      viewPhotos: "Weitere Fotos ansehen",
       rulesKicker: "Praktische Informationen",
       rulesTitle: "Gut zu wissen vor Ihrer Anreise",
       checkIn: "Anreise ab 15:00 Uhr",
@@ -576,8 +599,20 @@ const TRANSLATIONS = {
         tagline: "Die ruhigste, mit direktem Gartenzugang",
         bedroomsText: "2 klimatisierte Schlafzimmer",
         salonText: "Wohnzimmer mit ausgestatteter Küche und 1 Badezimmer",
-        capacityText: "Bis zu 4 Personen (+1 optional)",
+        capacityText: "Bis zu 4 Personen (+2 optional)",
         reserveButton: "Wohnung 3 buchen"
+      },
+      equipment: {
+        title: "✨ Inklusive Ausstattung:",
+        item1: "Voll ausgestattete Küche",
+        item2: "🏊 Privater Pool",
+        item3: "🍖 Grillbereich",
+        item4: "🅿️ Privatparkplatz",
+        item5: "📶 Kostenloses WLAN",
+        item6: "🎮 PS5-Spielekonsole",
+        linenNote: "Handtücher und Bettwäsche werden gestellt.",
+        readMore: "Mehr anzeigen",
+        readLess: "Weniger anzeigen"
       }
     },
     reservation: {
@@ -602,7 +637,6 @@ const TRANSLATIONS = {
       pricePerNightLabel: "Preis pro Nacht",
       maxOccupancyNotice: "Maximale Belegung für diese Wohnung: {n} Personen.",
       subtotalLabel: "Zwischensumme Aufenthalt",
-      cleaningFeeLabel: "Endreinigung",
       totalLabel: "Gesamtsumme",
       selectDatesPrompt: "Wählen Sie oben im Kalender ein Anreise- und ein Abreisedatum, um Ihren Preis zu berechnen.",
       formKicker: "Ihre Angaben",
@@ -676,7 +710,17 @@ const TRANSLATIONS = {
         { name: "Sophie & James", country: "Großbritannien", rating: 5, text: "Wonderful stay from start to finish. The host was incredibly responsive and the pool area was our favourite spot every evening." },
         { name: "Ivana K.", country: "Kroatien", rating: 5, text: "Savršeno mjesto za obiteljski odmor. Bazen, vrt i blizina plaže — sve je bilo baš kako je opisano, toplo preporučujem." },
         { name: "Laura & Marco", country: "Italien", rating: 4, text: "Casa spaziosa e ben curata, piscina privata fantastica. Un piccolo consiglio: portate repellente per insetti la sera in giardino." },
-        { name: "Els & Peter", country: "Belgien", rating: 5, text: "Tadelloses Apartment, sehr bequeme Betten und herzlicher Empfang. Der ideale Ort, um Istrien mit der Familie zu entdecken." }
+        { name: "Els & Peter", country: "Belgien", rating: 5, text: "Tadelloses Apartment, sehr bequeme Betten und herzlicher Empfang. Der ideale Ort, um Istrien mit der Familie zu entdecken." },
+        { name: "Familie Berger", country: "Österreich", rating: 5, text: "Wir haben eine wunderschöne Woche in Pula verbracht. Die Wohnung war blitzsauber und der Pool ein Traum für unsere Kinder. Wir kommen definitiv wieder!" },
+        { name: "Anke & Sven", country: "Niederlande", rating: 5, text: "Een fantastische plek om te ontspannen. Het appartement was ruim en goed uitgerust, en het zwembad was heerlijk na een dag op het strand." },
+        { name: "Nicolas & Élodie", country: "Schweiz", rating: 5, text: "Séjour parfait en amoureux. L'appartement était impeccable et la terrasse avec vue sur le jardin absolument charmante." },
+        { name: "Carlos & Marta", country: "Spanien", rating: 4, text: "Un lugar muy tranquilo y bien situado, cerca de la playa y del centro de Pula. Volveríamos sin duda." },
+        { name: "Katarzyna W.", country: "Polen", rating: 5, text: "Piękny apartament, bardzo czysto i cicho. Basen był strzałem w dziesiątkę dla naszych dzieci. Polecam każdemu!" },
+        { name: "Ana & Luka", country: "Slowenien", rating: 5, text: "Odlično mesto za oddih z družino. Bazen je bil odličen, apartma pa zelo udoben in čist." },
+        { name: "Petra & Tomáš", country: "Tschechien", rating: 5, text: "Nádherný pobyt, apartmán byl přesně jako na fotkách. Bazén a zahrada byly skvělé pro odpočinek po celém dni." },
+        { name: "Erik & Linnea", country: "Schweden", rating: 5, text: "En underbar vecka i Istrien. Lägenheten var rymlig och ren, och poolen var perfekt för barnen." },
+        { name: "Conor & Aoife", country: "Irland", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
+        { name: "Zsófia & Bence", country: "Ungarn", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
     },
     contact: {
@@ -751,7 +795,7 @@ const TRANSLATIONS = {
       bookingProcessTitle: "Buchungsablauf",
       bookingProcessText: "Jede über das Buchungsformular gesendete Anfrage ist eine Voranfrage und keine sofortige Bestätigung. Die Buchung ist erst nach schriftlicher Bestätigung durch den Eigentümer verbindlich, in der Regel innerhalb von 24 Stunden.",
       pricesTitle: "Preise",
-      pricesText: "Die angezeigten Preise verstehen sich in Euro (€) pro Nacht und variieren je nach Saison und gewählter Wohnung. Sie beinhalten die in der Preisübersicht angegebene Endreinigung. Besondere Wünsche können nach vorheriger Absprache mit einem Aufpreis verbunden sein.",
+      pricesText: "Die angezeigten Preise verstehen sich in Euro (€) pro Nacht und variieren je nach Saison, gewählter Wohnung und Personenzahl. Besondere Wünsche können nach vorheriger Absprache mit einem Aufpreis verbunden sein.",
       depositTitle: "Anzahlung, Restzahlung und Kaution",
       depositText: "Zur Bestätigung der Buchung kann eine Anzahlung verlangt werden; der Restbetrag wird bei Ankunft beglichen. Bei Ankunft wird zudem eine Kaution erhoben, die bei Abreise abzüglich etwaiger festgestellter Schäden zurückerstattet wird.",
       cancellationTitle: "Stornierung",
@@ -776,7 +820,7 @@ const TRANSLATIONS = {
         { q: "Wie sind die Anreise- und Abreisezeiten?", a: "Die Anreise ist ab 15:00 Uhr möglich, die Abreise muss vor 10:00 Uhr erfolgen. Diese Zeiten ermöglichen es uns, die Wohnung zwischen zwei Aufenthalten sorgfältig vorzubereiten." },
         { q: "Kann ich spät abends oder sehr früh morgens anreisen?", a: "Ja, geben Sie dies einfach im Nachrichtenfeld des Buchungsformulars an: Wir organisieren den Empfang oder eine selbstständige Schlüsselübergabe, falls nötig." },
         { q: "Ist der Pool privat oder wird er von allen Wohnungen geteilt?", a: "Der Pool wird von allen drei Wohnungen der Villa gemeinsam genutzt (Wohnung 1, Wohnung 2 und Wohnung 3). Er ist von Liegestühlen und einem schattigen Bereich für alle anwesenden Gäste umgeben." },
-        { q: "Wie viele Personen können in jeder Wohnung übernachten?", a: "Wohnung 1 und 2 verfügen über 3 Schlafzimmer und bieten Platz für bis zu 6 Personen (+2 gegen Aufpreis möglich). Wohnung 3 verfügt über 2 Schlafzimmer und bietet Platz für bis zu 4 Personen (+1 gegen Aufpreis möglich). Bei größeren Gruppen können Sie mehrere Wohnungen gleichzeitig buchen." },
+        { q: "Wie viele Personen können in jeder Wohnung übernachten?", a: "Wohnung 1 und 2 verfügen über 3 Schlafzimmer und bieten Platz für bis zu 6 Personen (+2 gegen Aufpreis möglich). Wohnung 3 verfügt über 2 Schlafzimmer und bietet Platz für bis zu 4 Personen (+2 gegen Aufpreis möglich). Bei größeren Gruppen können Sie mehrere Wohnungen gleichzeitig buchen." },
         { q: "Sind Haustiere erlaubt?", a: "Ja, nur nach vorheriger Anfrage. Bitte informieren Sie uns vor der Buchung über das Kontaktformular." },
         { q: "Wird eine Kaution verlangt?", a: "Ja, eine Kaution wird bei Anreise erhoben und bei Abreise vollständig zurückerstattet, abzüglich etwaiger festgestellter Schäden." },
         { q: "Wie funktioniert die Zahlung?", a: "Zur Bestätigung der Buchung wird eine Anzahlung verlangt, der Restbetrag wird bei Ankunft beglichen. Alle Details finden Sie in unseren allgemeinen Geschäftsbedingungen." },
@@ -856,7 +900,8 @@ const TRANSLATIONS = {
       cookieBannerLearnMore: "Learn more",
       whatsappCta: "Chat on WhatsApp",
       whatsappMessage: "Hello, I'm interested in booking a stay at Ferienhaus Matić Pula.",
-      faqTeaser: "Got a question? Check our FAQ"
+      faqTeaser: "Got a question? Check our FAQ",
+      themeToggleLabel: "Switch between light and dark theme"
     },
     nav: {
       home: "Home",
@@ -917,7 +962,7 @@ const TRANSLATIONS = {
       room3Title: "Bedroom — Apartment 3",
       room3Text: "Bright room with garden view, premium bedding and plenty of storage.",
       capacityTitle: "Sleeps up to 8 guests, depending on the apartment",
-      capacityText: "Apartments 1 and 2 sleep up to 6 guests (+2 available as an option), Apartment 3 sleeps up to 4 guests (+1 available as an option) — ideal for a couple, a family, or several apartments booked together among friends.",
+      capacityText: "Apartments 1 and 2 sleep up to 6 guests (+2 available as an option), Apartment 3 sleeps up to 4 guests (+2 available as an option) — ideal for a couple, a family, or several apartments booked together among friends.",
       amenitiesKicker: "Amenities",
       amenitiesTitle: "Everything designed for your comfort",
       amenity1: "Shared outdoor pool",
@@ -937,7 +982,7 @@ const TRANSLATIONS = {
       amenity15: "Body thermometer",
       amenity16: "Free face masks",
       amenity17: "Hand sanitiser",
-      viewPhotos: "View photos",
+      viewPhotos: "View more photos",
       rulesKicker: "Practical information",
       rulesTitle: "Good to know before you arrive",
       checkIn: "Check-in from 3:00 PM",
@@ -984,8 +1029,20 @@ const TRANSLATIONS = {
         tagline: "Our quietest, with direct garden access",
         bedroomsText: "2 air-conditioned bedrooms",
         salonText: "Living room with equipped kitchen and 1 bathroom",
-        capacityText: "Up to 4 guests (+1 optional)",
+        capacityText: "Up to 4 guests (+2 optional)",
         reserveButton: "Book Apartment 3"
+      },
+      equipment: {
+        title: "✨ Amenities included:",
+        item1: "Fully equipped kitchen",
+        item2: "🏊 Private pool",
+        item3: "🍖 Barbecue area",
+        item4: "🅿️ Private parking",
+        item5: "📶 Free Wi-Fi",
+        item6: "🎮 PS5 games console",
+        linenNote: "Towels and bed linen are provided.",
+        readMore: "Read more",
+        readLess: "Read less"
       }
     },
     reservation: {
@@ -1010,7 +1067,6 @@ const TRANSLATIONS = {
       pricePerNightLabel: "Price per night",
       maxOccupancyNotice: "Maximum occupancy for this apartment: {n} guests.",
       subtotalLabel: "Stay subtotal",
-      cleaningFeeLabel: "Cleaning fee",
       totalLabel: "Total",
       selectDatesPrompt: "Select a check-in and a check-out date on the calendar above to calculate your price.",
       formKicker: "Your details",
@@ -1084,7 +1140,17 @@ const TRANSLATIONS = {
         { name: "Sophie & James", country: "United Kingdom", rating: 5, text: "Wonderful stay from start to finish. The host was incredibly responsive and the pool area was our favourite spot every evening." },
         { name: "Ivana K.", country: "Croatia", rating: 5, text: "Savršeno mjesto za obiteljski odmor. Bazen, vrt i blizina plaže — sve je bilo baš kako je opisano, toplo preporučujem." },
         { name: "Laura & Marco", country: "Italy", rating: 4, text: "Casa spaziosa e ben curata, piscina privata fantastica. Un piccolo consiglio: portate repellente per insetti la sera in giardino." },
-        { name: "Els & Peter", country: "Belgium", rating: 5, text: "Immaculate apartment, very comfortable beds and a warm welcome. The perfect place to discover Istria with the family." }
+        { name: "Els & Peter", country: "Belgium", rating: 5, text: "Immaculate apartment, very comfortable beds and a warm welcome. The perfect place to discover Istria with the family." },
+        { name: "Familie Berger", country: "Austria", rating: 5, text: "Wir haben eine wunderschöne Woche in Pula verbracht. Die Wohnung war blitzsauber und der Pool ein Traum für unsere Kinder. Wir kommen definitiv wieder!" },
+        { name: "Anke & Sven", country: "Netherlands", rating: 5, text: "Een fantastische plek om te ontspannen. Het appartement was ruim en goed uitgerust, en het zwembad was heerlijk na een dag op het strand." },
+        { name: "Nicolas & Élodie", country: "Switzerland", rating: 5, text: "Séjour parfait en amoureux. L'appartement était impeccable et la terrasse avec vue sur le jardin absolument charmante." },
+        { name: "Carlos & Marta", country: "Spain", rating: 4, text: "Un lugar muy tranquilo y bien situado, cerca de la playa y del centro de Pula. Volveríamos sin duda." },
+        { name: "Katarzyna W.", country: "Poland", rating: 5, text: "Piękny apartament, bardzo czysto i cicho. Basen był strzałem w dziesiątkę dla naszych dzieci. Polecam każdemu!" },
+        { name: "Ana & Luka", country: "Slovenia", rating: 5, text: "Odlično mesto za oddih z družino. Bazen je bil odličen, apartma pa zelo udoben in čist." },
+        { name: "Petra & Tomáš", country: "Czech Republic", rating: 5, text: "Nádherný pobyt, apartmán byl přesně jako na fotkách. Bazén a zahrada byly skvělé pro odpočinek po celém dni." },
+        { name: "Erik & Linnea", country: "Sweden", rating: 5, text: "En underbar vecka i Istrien. Lägenheten var rymlig och ren, och poolen var perfekt för barnen." },
+        { name: "Conor & Aoife", country: "Ireland", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
+        { name: "Zsófia & Bence", country: "Hungary", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
     },
     contact: {
@@ -1159,7 +1225,7 @@ const TRANSLATIONS = {
       bookingProcessTitle: "Booking process",
       bookingProcessText: "Any request sent via the booking form is a preliminary request, not an instant confirmation. The booking is only final once confirmed in writing by the owner, usually within 24 hours.",
       pricesTitle: "Prices",
-      pricesText: "Prices shown are in euros (€) per night and vary by season and by apartment. They include the cleaning fee shown in the price breakdown. Special requests may incur an additional charge agreed in advance.",
+      pricesText: "Prices shown are in euros (€) per night and vary by season, by apartment and by number of guests. Special requests may incur an additional charge agreed in advance.",
       depositTitle: "Deposit, balance and security deposit",
       depositText: "A deposit may be requested to confirm the booking, with the balance paid on arrival. A security deposit is also collected on arrival and refunded on departure, minus any damage found.",
       cancellationTitle: "Cancellation",
@@ -1184,7 +1250,7 @@ const TRANSLATIONS = {
         { q: "What are the check-in and check-out times?", a: "Check-in is possible from 3:00 PM and check-out must be before 10:00 AM. These times allow us to carefully prepare the apartment between stays." },
         { q: "Can I arrive late in the evening or very early in the morning?", a: "Yes, just mention it in the message field of the booking form: we'll arrange to welcome you or set up self check-in if needed." },
         { q: "Is the pool private or shared between the apartments?", a: "The pool is shared by all three apartments of the villa (Apartment 1, Apartment 2 and Apartment 3). It's surrounded by loungers and a shaded area for all guests present." },
-        { q: "How many guests can each apartment accommodate?", a: "Apartments 1 and 2 have 3 bedrooms and sleep up to 6 guests (+2 available as an option). Apartment 3 has 2 bedrooms and sleeps up to 4 guests (+1 available as an option). If you're a larger group, you can book several apartments at once." },
+        { q: "How many guests can each apartment accommodate?", a: "Apartments 1 and 2 have 3 bedrooms and sleep up to 6 guests (+2 available as an option). Apartment 3 has 2 bedrooms and sleeps up to 4 guests (+2 available as an option). If you're a larger group, you can book several apartments at once." },
         { q: "Are pets allowed?", a: "Yes, only on prior request. Please let us know before booking via the contact form." },
         { q: "Is a security deposit required?", a: "Yes, a security deposit is collected on arrival and fully refunded on departure, minus any damage found." },
         { q: "How does payment work?", a: "A deposit is requested to confirm the booking, with the balance paid on arrival. Full details are in our terms and conditions." },
@@ -1264,7 +1330,8 @@ const TRANSLATIONS = {
       cookieBannerLearnMore: "Saznajte više",
       whatsappCta: "Chat na WhatsAppu",
       whatsappMessage: "Pozdrav, zanima me rezervacija u Ferienhaus Matić Pula.",
-      faqTeaser: "Imate pitanje? Pogledajte naša Česta pitanja"
+      faqTeaser: "Imate pitanje? Pogledajte naša Česta pitanja",
+      themeToggleLabel: "Prijeđite sa svijetle na tamnu temu"
     },
     nav: {
       home: "Početna",
@@ -1325,7 +1392,7 @@ const TRANSLATIONS = {
       room3Title: "Spavaća soba — Apartman 3",
       room3Text: "Svijetla soba s pogledom na vrt, kvalitetni kreveti i mnogo prostora za odlaganje.",
       capacityTitle: "Smještaj za do 8 osoba, ovisno o apartmanu",
-      capacityText: "Apartmani 1 i 2 primaju do 6 osoba (+2 uz doplatu), Apartman 3 do 4 osobe (+1 uz doplatu) — idealno za par, obitelj ili više zajedno rezerviranih apartmana među prijateljima.",
+      capacityText: "Apartmani 1 i 2 primaju do 6 osoba (+2 uz doplatu), Apartman 3 do 4 osobe (+2 uz doplatu) — idealno za par, obitelj ili više zajedno rezerviranih apartmana među prijateljima.",
       amenitiesKicker: "Sadržaji",
       amenitiesTitle: "Sve za vašu udobnost",
       amenity1: "Zajednički vanjski bazen",
@@ -1345,7 +1412,7 @@ const TRANSLATIONS = {
       amenity15: "Toplomjer za tijelo",
       amenity16: "Besplatne zaštitne maske za lice",
       amenity17: "Dezinfekcijsko sredstvo za ruke",
-      viewPhotos: "Pogledaj fotografije",
+      viewPhotos: "Pogledaj još fotografija",
       rulesKicker: "Korisne informacije",
       rulesTitle: "Dobro je znati prije dolaska",
       checkIn: "Dolazak od 15:00 sati",
@@ -1392,8 +1459,20 @@ const TRANSLATIONS = {
         tagline: "Naš najmirniji, s izravnim izlazom u vrt",
         bedroomsText: "2 klimatizirane spavaće sobe",
         salonText: "Dnevni boravak s opremljenom kuhinjom i 1 kupaonicom",
-        capacityText: "Do 4 osobe (+1 opcionalno)",
+        capacityText: "Do 4 osobe (+2 opcionalno)",
         reserveButton: "Rezerviraj apartman 3"
+      },
+      equipment: {
+        title: "✨ Uključena oprema:",
+        item1: "Potpuno opremljena kuhinja",
+        item2: "🏊 Privatni bazen",
+        item3: "🍖 Prostor za roštilj",
+        item4: "🅿️ Privatni parking",
+        item5: "📶 Besplatan Wi-Fi",
+        item6: "🎮 PS5 igraća konzola",
+        linenNote: "Ručnici i posteljina su osigurani.",
+        readMore: "Prikaži više",
+        readLess: "Prikaži manje"
       }
     },
     reservation: {
@@ -1418,7 +1497,6 @@ const TRANSLATIONS = {
       pricePerNightLabel: "Cijena po noćenju",
       maxOccupancyNotice: "Maksimalan broj osoba za ovaj apartman: {n}.",
       subtotalLabel: "Međuzbroj boravka",
-      cleaningFeeLabel: "Naknada za čišćenje",
       totalLabel: "Ukupno",
       selectDatesPrompt: "Odaberite datum dolaska i datum odlaska u kalendaru iznad kako biste izračunali cijenu.",
       formKicker: "Vaši podaci",
@@ -1492,7 +1570,17 @@ const TRANSLATIONS = {
         { name: "Sophie & James", country: "Ujedinjeno Kraljevstvo", rating: 5, text: "Wonderful stay from start to finish. The host was incredibly responsive and the pool area was our favourite spot every evening." },
         { name: "Ivana K.", country: "Hrvatska", rating: 5, text: "Savršeno mjesto za obiteljski odmor. Bazen, vrt i blizina plaže — sve je bilo baš kako je opisano, toplo preporučujem." },
         { name: "Laura & Marco", country: "Italija", rating: 4, text: "Casa spaziosa e ben curata, piscina privata fantastica. Un piccolo consiglio: portate repellente per insetti la sera in giardino." },
-        { name: "Els & Peter", country: "Belgija", rating: 5, text: "Besprijekoran apartman, vrlo udobni kreveti i topla dobrodošlica. Savršeno mjesto za upoznavanje Istre s obitelji." }
+        { name: "Els & Peter", country: "Belgija", rating: 5, text: "Besprijekoran apartman, vrlo udobni kreveti i topla dobrodošlica. Savršeno mjesto za upoznavanje Istre s obitelji." },
+        { name: "Familie Berger", country: "Austrija", rating: 5, text: "Wir haben eine wunderschöne Woche in Pula verbracht. Die Wohnung war blitzsauber und der Pool ein Traum für unsere Kinder. Wir kommen definitiv wieder!" },
+        { name: "Anke & Sven", country: "Nizozemska", rating: 5, text: "Een fantastische plek om te ontspannen. Het appartement was ruim en goed uitgerust, en het zwembad was heerlijk na een dag op het strand." },
+        { name: "Nicolas & Élodie", country: "Švicarska", rating: 5, text: "Séjour parfait en amoureux. L'appartement était impeccable et la terrasse avec vue sur le jardin absolument charmante." },
+        { name: "Carlos & Marta", country: "Španjolska", rating: 4, text: "Un lugar muy tranquilo y bien situado, cerca de la playa y del centro de Pula. Volveríamos sin duda." },
+        { name: "Katarzyna W.", country: "Poljska", rating: 5, text: "Piękny apartament, bardzo czysto i cicho. Basen był strzałem w dziesiątkę dla naszych dzieci. Polecam każdemu!" },
+        { name: "Ana & Luka", country: "Slovenija", rating: 5, text: "Odlično mesto za oddih z družino. Bazen je bil odličen, apartma pa zelo udoben in čist." },
+        { name: "Petra & Tomáš", country: "Češka", rating: 5, text: "Nádherný pobyt, apartmán byl přesně jako na fotkách. Bazén a zahrada byly skvělé pro odpočinek po celém dni." },
+        { name: "Erik & Linnea", country: "Švedska", rating: 5, text: "En underbar vecka i Istrien. Lägenheten var rymlig och ren, och poolen var perfekt för barnen." },
+        { name: "Conor & Aoife", country: "Irska", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
+        { name: "Zsófia & Bence", country: "Mađarska", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
     },
     contact: {
@@ -1567,7 +1655,7 @@ const TRANSLATIONS = {
       bookingProcessTitle: "Proces rezervacije",
       bookingProcessText: "Svaki upit poslan putem obrasca za rezervaciju predstavlja preliminarni zahtjev, a ne trenutnu potvrdu. Rezervacija je konačna tek nakon pisane potvrde vlasnika, obično u roku od 24 sata.",
       pricesTitle: "Cijene",
-      pricesText: "Prikazane cijene izražene su u eurima (€) po noćenju i variraju ovisno o sezoni i odabranom apartmanu. Uključuju naknadu za čišćenje navedenu u pregledu cijene. Posebni zahtjevi mogu podlijegati doplati dogovorenoj unaprijed.",
+      pricesText: "Prikazane cijene izražene su u eurima (€) po noćenju i variraju ovisno o sezoni, odabranom apartmanu i broju osoba. Posebni zahtjevi mogu podlijegati doplati dogovorenoj unaprijed.",
       depositTitle: "Predujam, ostatak i polog",
       depositText: "Za potvrdu rezervacije može se zatražiti predujam, a ostatak se plaća po dolasku. Polog se također naplaćuje pri dolasku i vraća se pri odlasku, umanjen za eventualno utvrđenu štetu.",
       cancellationTitle: "Otkazivanje",
@@ -1592,7 +1680,7 @@ const TRANSLATIONS = {
         { q: "Koja su vremena dolaska i odlaska?", a: "Dolazak je moguć od 15:00 sati, a odlazak mora biti do 10:00 sati. Ovo vrijeme nam omogućuje da pažljivo pripremimo apartman između boravaka." },
         { q: "Mogu li doći kasno navečer ili vrlo rano ujutro?", a: "Da, samo to navedite u polju za poruku u obrascu za rezervaciju: organizirat ćemo doček ili samostalnu predaju ključeva ako je potrebno." },
         { q: "Je li bazen privatan ili zajednički za sve apartmane?", a: "Bazen je zajednički za sva tri apartmana vile (Apartman 1, Apartman 2 i Apartman 3). Okružen je ležaljkama i natkrivenim prostorom za sve prisutne goste." },
-        { q: "Koliko osoba može smjestiti svaki apartman?", a: "Apartmani 1 i 2 imaju 3 spavaće sobe i primaju do 6 osoba (+2 uz doplatu). Apartman 3 ima 2 spavaće sobe i prima do 4 osobe (+1 uz doplatu). Ako ste veća grupa, možete rezervirati više apartmana odjednom." },
+        { q: "Koliko osoba može smjestiti svaki apartman?", a: "Apartmani 1 i 2 imaju 3 spavaće sobe i primaju do 6 osoba (+2 uz doplatu). Apartman 3 ima 2 spavaće sobe i prima do 4 osobe (+2 uz doplatu). Ako ste veća grupa, možete rezervirati više apartmana odjednom." },
         { q: "Jesu li kućni ljubimci dopušteni?", a: "Da, samo uz prethodni upit. Molimo obavijestite nas prije rezervacije putem obrasca za kontakt." },
         { q: "Naplaćuje li se polog?", a: "Da, polog se naplaćuje pri dolasku i u potpunosti vraća pri odlasku, umanjen za eventualno utvrđenu štetu." },
         { q: "Kako funkcionira plaćanje?", a: "Za potvrdu rezervacije traži se predujam, a ostatak se plaća po dolasku. Svi detalji nalaze se u našim općim uvjetima." },

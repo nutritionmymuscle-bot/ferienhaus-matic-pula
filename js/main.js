@@ -112,13 +112,17 @@ function initGalleryLightbox() {
   });
 }
 
+// Ordre des photos : salon, puis chambre, puis cuisine, puis salle de bain (voir README pour le détail par pièce).
 const APARTMENT_PHOTO_SETS = {
-  apt1: Array.from({ length: 16 }, (_, i) => `images/appartement-1/photo-${String(i + 1).padStart(2, "0")}.png`),
-  apt2: [
-    ...Array.from({ length: 12 }, (_, i) => `images/appartement-2/photo-${String(i + 1).padStart(2, "0")}.png`),
-    "images/appartement-2/photo-13.jpeg",
-  ],
-  apt3: Array.from({ length: 14 }, (_, i) => `images/appartement-3/photo-${String(i + 1).padStart(2, "0")}.png`),
+  apt1: [
+    "06", "07", "09", "10", "01", "02", "03", "04", "05", "11", "12", "08", "13", "14", "15", "16",
+  ].map((n) => `images/appartement-1/photo-${n}.png`),
+  apt2: ["05", "06", "09", "01", "02", "03", "11", "12", "07", "08", "04", "10", "13"].map((n) =>
+    n === "13" ? "images/appartement-2/photo-13.jpeg" : `images/appartement-2/photo-${n}.png`
+  ),
+  apt3: [
+    "01", "02", "04", "05", "06", "07", "08", "09", "10", "11", "12", "03", "13", "14",
+  ].map((n) => `images/appartement-3/photo-${n}.png`),
 };
 
 function initApartmentPhotoLightbox() {
@@ -130,6 +134,31 @@ function initApartmentPhotoLightbox() {
       if (urls) Lightbox.open(urls, 0);
     });
   });
+}
+
+function updateRoomCardToggleLabels() {
+  const lang = getCurrentLang();
+  document.querySelectorAll("[data-toggle-more]").forEach((btn) => {
+    const more = btn.previousElementSibling;
+    if (!more || !more.classList.contains("room-card-more")) return;
+    const label = btn.querySelector("span");
+    if (!label) return;
+    const isExpanded = more.classList.contains("is-expanded");
+    label.textContent = t(isExpanded ? "apartments.equipment.readLess" : "apartments.equipment.readMore", lang);
+  });
+}
+
+function initRoomCardToggles() {
+  document.querySelectorAll("[data-toggle-more]").forEach((btn) => {
+    const more = btn.previousElementSibling;
+    if (!more || !more.classList.contains("room-card-more")) return;
+    btn.addEventListener("click", () => {
+      more.classList.toggle("is-expanded");
+      btn.classList.toggle("is-open", more.classList.contains("is-expanded"));
+      updateRoomCardToggleLabels();
+    });
+  });
+  updateRoomCardToggleLabels();
 }
 
 function buildFAQItem(item) {
@@ -197,6 +226,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initGalleryFilters();
   initGalleryLightbox();
   initApartmentPhotoLightbox();
+  initRoomCardToggles();
   renderFAQ();
   updateWhatsappLinks();
   initCookieBanner();
@@ -206,4 +236,5 @@ document.addEventListener("i18n:applied", () => {
   renderTestimonials();
   renderFAQ();
   updateWhatsappLinks();
+  updateRoomCardToggleLabels();
 });
