@@ -41,7 +41,7 @@ const PRICING_CONFIG = {
       basePrice: 130,
       baseOccupancy: 4,
       maxOccupancy: 5,
-      extraGuestFee: 30
+      extraGuestFee: 50
     }
   }
 };
