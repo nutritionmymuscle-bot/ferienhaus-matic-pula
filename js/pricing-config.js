@@ -1,10 +1,15 @@
 /* ==========================================================================
    Ferienhaus Matić Pula — Configuration des prix
-   👉 La maison compte 3 appartements indépendants (2 chambres + salon
-   chacun), réservables séparément. Le propriétaire modifie UNIQUEMENT ce
-   fichier pour changer les tarifs de chaque appartement.
-   Les dates sont au format "AAAA-MM-JJ". Les périodes ne doivent pas se
-   chevaucher. Toute date en dehors des périodes utilise le tarif par défaut.
+   👉 La maison compte 3 appartements indépendants, réservables séparément.
+   Le propriétaire modifie UNIQUEMENT ce fichier pour changer les tarifs.
+
+   Le prix par nuit ne dépend plus de la saison, mais du nombre de
+   personnes : chaque appartement a un prix de base pour une occupation
+   standard ("baseOccupancy"), puis un supplément fixe par personne
+   au-delà de ce nombre, jusqu'à l'occupation maximale ("maxOccupancy").
+
+   Exemple Appartement 1 : basePrice 180€ pour 6 personnes, extraGuestFee
+   50€ → 230€ pour 7 personnes, 280€ pour 8 personnes (maxOccupancy).
    ========================================================================== */
 
 const PRICING_CONFIG = {
@@ -12,43 +17,31 @@ const PRICING_CONFIG = {
 
   apartments: {
     apt1: {
-      // Appartement 1
+      // Appartement 1 — 3 chambres, jusqu'à 6+2 personnes
       cleaningFee: 35,
       minNights: 2,
-      defaultPricePerNight: 70,
-      seasons: [
-        { label: "Basse saison",   start: "2026-01-01", end: "2026-05-14", pricePerNight: 70 },
-        { label: "Moyenne saison", start: "2026-05-15", end: "2026-06-30", pricePerNight: 95 },
-        { label: "Haute saison",   start: "2026-07-01", end: "2026-08-31", pricePerNight: 140 },
-        { label: "Moyenne saison", start: "2026-09-01", end: "2026-09-30", pricePerNight: 95 },
-        { label: "Basse saison",   start: "2026-10-01", end: "2026-12-31", pricePerNight: 70 }
-      ]
+      basePrice: 180,
+      baseOccupancy: 6,
+      maxOccupancy: 8,
+      extraGuestFee: 50
     },
     apt2: {
-      // Appartement 2
+      // Appartement 2 — 3 chambres, jusqu'à 6+2 personnes
       cleaningFee: 40,
       minNights: 2,
-      defaultPricePerNight: 75,
-      seasons: [
-        { label: "Basse saison",   start: "2026-01-01", end: "2026-05-14", pricePerNight: 75 },
-        { label: "Moyenne saison", start: "2026-05-15", end: "2026-06-30", pricePerNight: 100 },
-        { label: "Haute saison",   start: "2026-07-01", end: "2026-08-31", pricePerNight: 150 },
-        { label: "Moyenne saison", start: "2026-09-01", end: "2026-09-30", pricePerNight: 100 },
-        { label: "Basse saison",   start: "2026-10-01", end: "2026-12-31", pricePerNight: 75 }
-      ]
+      basePrice: 180,
+      baseOccupancy: 6,
+      maxOccupancy: 8,
+      extraGuestFee: 50
     },
     apt3: {
-      // Appartement 3
+      // Appartement 3 — 2 chambres, jusqu'à 4+1 personnes
       cleaningFee: 35,
       minNights: 2,
-      defaultPricePerNight: 65,
-      seasons: [
-        { label: "Basse saison",   start: "2026-01-01", end: "2026-05-14", pricePerNight: 65 },
-        { label: "Moyenne saison", start: "2026-05-15", end: "2026-06-30", pricePerNight: 90 },
-        { label: "Haute saison",   start: "2026-07-01", end: "2026-08-31", pricePerNight: 130 },
-        { label: "Moyenne saison", start: "2026-09-01", end: "2026-09-30", pricePerNight: 90 },
-        { label: "Basse saison",   start: "2026-10-01", end: "2026-12-31", pricePerNight: 65 }
-      ]
+      basePrice: 130,
+      baseOccupancy: 4,
+      maxOccupancy: 5,
+      extraGuestFee: 30
     }
   }
 };
@@ -58,9 +51,10 @@ function getApartmentConfig(apartmentId) {
   return PRICING_CONFIG.apartments[apartmentId] || PRICING_CONFIG.apartments.apt1;
 }
 
-/** Renvoie le prix par nuit (en €) pour un appartement et une date ISO "AAAA-MM-JJ" donnés. */
-function getPriceForDate(apartmentId, isoDate) {
+/** Renvoie le prix par nuit (en €) pour un appartement et un nombre de personnes donnés. */
+function getPricePerNight(apartmentId, guestCount) {
   const config = getApartmentConfig(apartmentId);
-  const season = config.seasons.find((s) => isoDate >= s.start && isoDate <= s.end);
-  return season ? season.pricePerNight : config.defaultPricePerNight;
+  const cappedGuests = Math.min(Math.max(guestCount, 0), config.maxOccupancy);
+  const extraGuests = Math.max(0, cappedGuests - config.baseOccupancy);
+  return config.basePrice + extraGuests * config.extraGuestFee;
 }

@@ -72,7 +72,7 @@ function initBookingForm() {
       checkin: booking.checkin,
       checkout: booking.checkout,
       nights: booking.nights,
-      price_per_night: `${booking.avgPerNight} ${booking.currency}`,
+      price_per_night: `${booking.pricePerNight} ${booking.currency}`,
       subtotal: `${booking.subtotal} ${booking.currency}`,
       cleaning_fee: `${booking.cleaningFee} ${booking.currency}`,
       total_price: `${booking.total} ${booking.currency}`,

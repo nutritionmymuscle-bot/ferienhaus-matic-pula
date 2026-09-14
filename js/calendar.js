@@ -154,11 +154,9 @@ function updateSummary() {
   }
 
   const nights = daysBetween(bookingState.start, bookingState.end);
-  let subtotal = 0;
-  for (let i = 0; i < nights; i++) {
-    subtotal += getPriceForDate(apartmentId, addNights(bookingState.start, i));
-  }
-  const avgPerNight = Math.round(subtotal / nights);
+  const guestCount = getGuestCount();
+  const pricePerNight = getPricePerNight(apartmentId, guestCount);
+  const subtotal = pricePerNight * nights;
   const total = subtotal + aptConfig.cleaningFee;
   const currency = PRICING_CONFIG.currency;
 
@@ -166,14 +164,17 @@ function updateSummary() {
   if (promptEl) promptEl.hidden = true;
 
   const belowMinNights = nights < aptConfig.minNights;
+  const overCapacity = guestCount > aptConfig.maxOccupancy;
+  const isValid = !belowMinNights && !overCapacity;
 
   breakdownEl.innerHTML = `
     <div class="price-line"><span>${dict.nightsLabel}</span><span class="value">${nights}</span></div>
-    <div class="price-line"><span>${dict.pricePerNightLabel}</span><span class="value">${avgPerNight} ${currency}</span></div>
+    <div class="price-line"><span>${dict.pricePerNightLabel}</span><span class="value">${pricePerNight} ${currency}</span></div>
     <div class="price-line"><span>${dict.subtotalLabel}</span><span class="value">${subtotal} ${currency}</span></div>
     <div class="price-line"><span>${dict.cleaningFeeLabel}</span><span class="value">${aptConfig.cleaningFee} ${currency}</span></div>
     <div class="price-line total"><span>${dict.totalLabel}</span><span class="value">${total} ${currency}</span></div>
     ${belowMinNights ? `<div class="form-notice form-notice--error" style="margin-top:14px;">${dict.minNightsNotice.replace("{n}", aptConfig.minNights)}</div>` : ""}
+    ${overCapacity ? `<div class="form-notice form-notice--error" style="margin-top:14px;">${dict.maxOccupancyNotice.replace("{n}", aptConfig.maxOccupancy)}</div>` : ""}
   `;
 
   // Expose l'état courant pour booking-form.js
@@ -183,14 +184,23 @@ function updateSummary() {
     checkout: bookingState.end,
     nights,
     subtotal,
-    avgPerNight,
+    pricePerNight,
     cleaningFee: aptConfig.cleaningFee,
     total,
     currency,
-    valid: !belowMinNights,
+    valid: isValid,
   };
 
-  updateSubmitAvailability(!belowMinNights);
+  updateSubmitAvailability(isValid);
+}
+
+/** Lit le nombre total de personnes (adultes + enfants) sélectionné dans le formulaire. */
+function getGuestCount() {
+  const adultsEl = document.getElementById("adults");
+  const childrenEl = document.getElementById("children");
+  const adults = adultsEl ? parseInt(adultsEl.value, 10) || 0 : 0;
+  const children = childrenEl ? parseInt(childrenEl.value, 10) || 0 : 0;
+  return adults + children;
 }
 
 function updateSubmitAvailability(isValid) {
@@ -283,6 +293,11 @@ function initCalendar() {
       renderCalendar();
     });
   }
+
+  const adultsEl = document.getElementById("adults");
+  const childrenEl = document.getElementById("children");
+  if (adultsEl) adultsEl.addEventListener("change", updateSummary);
+  if (childrenEl) childrenEl.addEventListener("change", updateSummary);
 
   renderCalendar();
   updateSummary();

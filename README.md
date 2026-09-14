@@ -1,6 +1,6 @@
 # Ferienhaus Matić Pula — Site web
 
-Site multipage pour la location de la **Villa Ferienhaus Matić Pula** (Pula – Istrie, Croatie) : une villa istrienne rénovée divisée en **3 appartements indépendants** — **Appartement 1**, **Appartement 2** et **Appartement 3** — chacun avec 2 chambres et un salon, réservables séparément, autour d'une **piscine commune**.
+Site multipage pour la location de la **Villa Ferienhaus Matić Pula** (Pula – Istrie, Croatie) : une villa istrienne rénovée divisée en **3 appartements indépendants** — **Appartement 1**, **Appartement 2** et **Appartement 3** — chacun avec 2 ou 3 chambres et un salon, réservables séparément, autour d'une **piscine privée commune**.
 
 - 12 pages : Accueil, À propos, Nos appartements, Galerie, Réservation, Localisation, Avis clients, FAQ, Contact, Mentions légales, Confidentialité, Conditions générales
 - 4 langues : Français, Deutsch, English, Hrvatski (sélecteur en haut à droite, mémorisé automatiquement)
@@ -119,21 +119,19 @@ Tant que `clientTemplateId` commence par `"YOUR_"`, cette confirmation automatiq
 
 Fichier : [`js/pricing-config.js`](js/pricing-config.js)
 
-La maison compte 3 appartements — `apt1` (Appartement 1), `apt2` (Appartement 2), `apt3` (Appartement 3) — chacun avec sa **propre** configuration de prix :
+La maison compte 3 appartements — `apt1` (Appartement 1), `apt2` (Appartement 2), `apt3` (Appartement 3) — chacun avec sa **propre** configuration de prix. Le prix par nuit ne dépend pas de la saison mais **du nombre de personnes** : un prix de base pour une occupation standard, puis un supplément fixe par personne au-delà, jusqu'à l'occupation maximale.
 
 ```js
 const PRICING_CONFIG = {
   currency: "€",
   apartments: {
     apt1: {
-      cleaningFee: 35,     // frais de ménage fixes par séjour, pour cet appartement
-      minNights: 2,        // séjour minimum pour cet appartement
-      defaultPricePerNight: 70,
-      seasons: [
-        { label: "Basse saison", start: "2026-01-01", end: "2026-05-14", pricePerNight: 70 },
-        { label: "Haute saison", start: "2026-07-01", end: "2026-08-31", pricePerNight: 140 },
-        // ajoute / modifie librement les périodes, format de date AAAA-MM-JJ
-      ],
+      cleaningFee: 35,      // frais de ménage fixes par séjour, pour cet appartement
+      minNights: 2,         // séjour minimum pour cet appartement
+      basePrice: 180,       // prix par nuit pour une occupation standard (baseOccupancy)
+      baseOccupancy: 6,     // nombre de personnes inclus dans le prix de base
+      maxOccupancy: 8,      // nombre maximum de personnes acceptées (base + suppléments)
+      extraGuestFee: 50,    // supplément par nuit et par personne au-delà de baseOccupancy
     },
     apt2: { /* ... mêmes clés, tarifs propres à l'Appartement 2 ... */ },
     apt3: { /* ... mêmes clés, tarifs propres à l'Appartement 3 ... */ },
@@ -141,7 +139,9 @@ const PRICING_CONFIG = {
 };
 ```
 
-Le prix affiché sur le site est recalculé automatiquement dès qu'une période est modifiée, pour l'appartement actuellement sélectionné sur la page de réservation.
+Exemple avec les valeurs ci-dessus : 180€/nuit jusqu'à 6 personnes, 230€ pour 7 personnes, 280€ pour 8 personnes (le maximum). Si le nombre de personnes sélectionné dépasse `maxOccupancy`, le site affiche un message d'erreur et bloque l'envoi de la demande.
+
+Le prix affiché sur le site est recalculé automatiquement dès que les dates ou le nombre d'adultes/enfants changent, pour l'appartement actuellement sélectionné sur la page de réservation.
 
 ---
 

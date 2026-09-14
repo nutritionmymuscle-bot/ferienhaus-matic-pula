@@ -313,6 +313,7 @@ p { margin: 0 0 1em; }
   padding: 14px 18px; background: var(--color-sand); border-radius: var(--radius-sm);
   font-size: 0.95rem;
 }
+.rules-list li span { min-width: 0; overflow-wrap: anywhere; }
 .rules-list svg { width: 20px; height: 20px; color: var(--color-terracotta); flex-shrink: 0; margin-top: 2px; }
 
 /* -------------------------------- Gallery ---------------------------------- */
