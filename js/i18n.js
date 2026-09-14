@@ -66,9 +66,8 @@ function applyTranslations(lang) {
     if (typeof titleValue === "string") document.title = titleValue;
   }
 
-  document.querySelectorAll("[data-lang-switch]").forEach((btn) => {
-    btn.classList.toggle("is-active", btn.getAttribute("data-lang-switch") === currentLang);
-    btn.setAttribute("aria-current", btn.getAttribute("data-lang-switch") === currentLang ? "true" : "false");
+  document.querySelectorAll("[data-lang-select]").forEach((select) => {
+    select.value = currentLang;
   });
 
   document.dispatchEvent(new CustomEvent("i18n:applied", { detail: { lang: currentLang } }));
@@ -82,8 +81,8 @@ function setLanguage(lang) {
 
 function initI18n() {
   applyTranslations(getCurrentLang());
-  document.querySelectorAll("[data-lang-switch]").forEach((btn) => {
-    btn.addEventListener("click", () => setLanguage(btn.getAttribute("data-lang-switch")));
+  document.querySelectorAll("[data-lang-select]").forEach((select) => {
+    select.addEventListener("change", () => setLanguage(select.value));
   });
 }
 

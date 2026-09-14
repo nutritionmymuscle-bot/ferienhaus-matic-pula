@@ -178,13 +178,14 @@ p { margin: 0 0 1em; }
 
 .header-actions { display: flex; align-items: center; gap: 12px; }
 
-.lang-switcher { display: flex; gap: 4px; background: var(--color-sand); border-radius: 999px; padding: 4px; }
-.lang-switcher button {
-  border: none; background: transparent; padding: 6px 10px; border-radius: 999px;
-  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.03em; color: var(--color-ink-faint);
-  transition: background var(--transition), color var(--transition);
+.lang-switcher { display: flex; }
+.lang-switcher select {
+  border: 1.5px solid var(--color-border); background: var(--color-sand); cursor: pointer;
+  padding: 8px 14px; border-radius: 999px;
+  font-size: 0.82rem; font-weight: 700; letter-spacing: 0.02em; color: var(--color-sea-deep);
+  transition: border-color var(--transition), background var(--transition);
 }
-.lang-switcher button.is-active { background: var(--color-sea-deep); color: #fff; }
+.lang-switcher select:hover, .lang-switcher select:focus { border-color: var(--color-sea); outline: none; }
 
 .nav-toggle {
   display: none;
@@ -259,6 +260,16 @@ p { margin: 0 0 1em; }
 
 .room-card { display: flex; flex-direction: column; }
 .room-card .img-placeholder { margin-bottom: 20px; }
+.room-card-photo { position: relative; margin-bottom: 20px; }
+.room-card-photo-btn {
+  position: absolute; left: 12px; right: 12px; bottom: 12px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 10px 16px; border-radius: 999px; border: none;
+  background: rgba(11,15,20,0.72); color: #fff; font-size: 0.85rem; font-weight: 600;
+  backdrop-filter: blur(2px); transition: background var(--transition);
+}
+.room-card-photo-btn:hover { background: rgba(11,15,20,0.88); }
+.room-card-photo-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 
 /* Image placeholder (en attendant les vraies photos) */
 .img-placeholder {
@@ -325,19 +336,22 @@ p { margin: 0 0 1em; }
 .gallery-filters button:hover { border-color: var(--color-sea); color: var(--color-sea-deep); }
 .gallery-filters button.is-active { background: var(--color-sea-deep); border-color: var(--color-sea-deep); color: #fff; }
 
-/* Onglets de sélection d'appartement (page réservation) */
-.apartment-tabs { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 36px; }
-.apartment-tabs button {
-  border: 1.5px solid var(--color-border); background: #fff; padding: 13px 28px; border-radius: 999px;
-  font-weight: 600; font-size: 1rem; color: var(--color-ink-soft); transition: all var(--transition);
+/* Sélection d'appartement (page réservation) */
+.apartment-select-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
+.apartment-select-wrap select {
+  border: 1.5px solid var(--color-border); background: #fff; padding: 15px 44px 15px 24px; border-radius: 999px;
+  font-weight: 600; font-size: 1.05rem; color: var(--color-sea-deep); cursor: pointer;
+  box-shadow: var(--shadow-sm); transition: border-color var(--transition);
+  min-width: 240px; text-align: center; text-align-last: center;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23146583' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 16px center; background-size: 18px; appearance: none; -webkit-appearance: none;
 }
-.apartment-tabs button:hover { border-color: var(--color-sea); color: var(--color-sea-deep); }
-.apartment-tabs button.is-active { background: var(--color-terracotta); border-color: var(--color-terracotta); color: #fff; box-shadow: var(--shadow-sm); }
+.apartment-select-wrap select:hover, .apartment-select-wrap select:focus { border-color: var(--color-terracotta); outline: none; }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .gallery-grid .img-placeholder { cursor: default; }
 .gallery-item[hidden] { display: none; }
 .gallery-item { border-radius: var(--radius-md); overflow: hidden; }
-.gallery-item img { transition: transform 0.5s ease; }
+.gallery-item img { transition: transform 0.5s ease; cursor: pointer; }
 .gallery-item:hover img { transform: scale(1.06); }
 
 .room-card img { transition: transform 0.5s ease; }
@@ -402,7 +416,7 @@ p { margin: 0 0 1em; }
 .calendar-nav button svg { width: 18px; height: 18px; color: var(--color-sea-deep); }
 .calendar-nav-label { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; color: var(--color-sea-deep); text-transform: capitalize; }
 
-.calendar-months { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.calendar-months { max-width: 360px; margin: 0 auto; }
 .calendar-month-label { text-align: center; font-weight: 700; margin-bottom: 12px; color: var(--color-sea-deep); text-transform: capitalize; }
 .calendar-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); margin-bottom: 6px; }
 .calendar-weekdays span { text-align: center; font-size: 0.72rem; color: var(--color-ink-faint); font-weight: 600; }
@@ -529,6 +543,46 @@ p { margin: 0 0 1em; }
 .cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
 .cookie-banner[hidden] { display: none; }
 
+/* -------------------------------- Lightbox (visionneuse photo) ---------------------------------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 1200;
+  background: rgba(11,15,20,0.94);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox-figure { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; max-width: min(92vw, 1100px); }
+.lightbox-image { max-width: 100%; max-height: 82vh; object-fit: contain; border-radius: var(--radius-sm); box-shadow: var(--shadow-lg); }
+.lightbox-caption { color: rgba(255,255,255,0.85); font-size: 0.92rem; text-align: center; }
+.lightbox-caption:empty { display: none; }
+.lightbox-close {
+  position: absolute; top: 20px; right: 20px; z-index: 2;
+  width: 44px; height: 44px; border-radius: 50%; border: none;
+  background: rgba(255,255,255,0.12); color: #fff; display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.22); }
+.lightbox-close svg { width: 22px; height: 22px; }
+.lightbox-nav {
+  position: absolute; top: 50%; transform: translateY(-50%); z-index: 2;
+  width: 52px; height: 52px; border-radius: 50%; border: none;
+  background: rgba(255,255,255,0.12); color: #fff; display: flex; align-items: center; justify-content: center;
+  transition: background var(--transition);
+}
+.lightbox-nav:hover { background: rgba(255,255,255,0.22); }
+.lightbox-nav svg { width: 26px; height: 26px; }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+.lightbox-counter { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.75); font-size: 0.85rem; letter-spacing: 0.04em; }
+
+@media (max-width: 720px) {
+  .lightbox-nav { width: 44px; height: 44px; }
+  .lightbox-nav svg { width: 22px; height: 22px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-close { top: 12px; right: 12px; }
+}
+
 /* -------------------------------- WhatsApp floating button ---------------------------------- */
 .whatsapp-float {
   position: fixed; bottom: 24px; right: 24px; z-index: 850;
@@ -592,7 +646,6 @@ p { margin: 0 0 1em; }
   .grid--3 { grid-template-columns: repeat(2, 1fr); }
   .booking-layout { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
-  .calendar-months { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
 }
 

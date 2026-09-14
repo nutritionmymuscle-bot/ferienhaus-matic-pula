@@ -115,11 +115,8 @@ function renderCalendar() {
   if (!container) return;
   const lang = getCurrentLang();
   const { viewYear, viewMonth, apartmentId } = bookingState;
-  const nextMonth = viewMonth === 11 ? 0 : viewMonth + 1;
-  const nextYear = viewMonth === 11 ? viewYear + 1 : viewYear;
 
-  container.innerHTML =
-    buildMonthGrid(viewYear, viewMonth, lang, apartmentId) + buildMonthGrid(nextYear, nextMonth, lang, apartmentId);
+  container.innerHTML = buildMonthGrid(viewYear, viewMonth, lang, apartmentId);
 
   const prevBtn = document.getElementById("calPrev");
   if (prevBtn) {
@@ -239,11 +236,8 @@ function switchApartment(apartmentId) {
   bookingState.start = null;
   bookingState.end = null;
 
-  document.querySelectorAll("[data-apartment-tab]").forEach((tab) => {
-    const isActive = tab.getAttribute("data-apartment-tab") === apartmentId;
-    tab.classList.toggle("is-active", isActive);
-    tab.setAttribute("aria-selected", isActive ? "true" : "false");
-  });
+  const select = document.getElementById("apartmentSelect");
+  if (select) select.value = apartmentId;
 
   const url = new URL(window.location.href);
   url.searchParams.set("apt", apartmentId.replace("apt", ""));
@@ -254,14 +248,10 @@ function switchApartment(apartmentId) {
 }
 
 function initApartmentTabs() {
-  const tabs = document.querySelectorAll("[data-apartment-tab]");
-  if (!tabs.length) return;
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => switchApartment(tab.getAttribute("data-apartment-tab")));
-    const isActive = tab.getAttribute("data-apartment-tab") === bookingState.apartmentId;
-    tab.classList.toggle("is-active", isActive);
-    tab.setAttribute("aria-selected", isActive ? "true" : "false");
-  });
+  const select = document.getElementById("apartmentSelect");
+  if (!select) return;
+  select.value = bookingState.apartmentId;
+  select.addEventListener("change", () => switchApartment(select.value));
 }
 
 function initCalendar() {

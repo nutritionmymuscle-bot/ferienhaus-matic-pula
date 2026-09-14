@@ -97,6 +97,41 @@ function initGalleryFilters() {
   });
 }
 
+function initGalleryLightbox() {
+  const grid = document.querySelector(".gallery-grid");
+  if (!grid || typeof Lightbox === "undefined") return;
+  grid.addEventListener("click", (evt) => {
+    const img = evt.target.closest(".gallery-item img");
+    if (!img) return;
+    const visibleItems = Array.from(grid.querySelectorAll(".gallery-item:not([hidden])"));
+    const urls = visibleItems.map((item) => item.querySelector("img").getAttribute("src"));
+    const captions = visibleItems.map((item) => item.querySelector("figcaption")?.textContent.trim() || "");
+    const clickedItem = img.closest(".gallery-item");
+    const startIndex = visibleItems.indexOf(clickedItem);
+    Lightbox.open(urls, startIndex, captions);
+  });
+}
+
+const APARTMENT_PHOTO_SETS = {
+  apt1: Array.from({ length: 16 }, (_, i) => `images/appartement-1/photo-${String(i + 1).padStart(2, "0")}.png`),
+  apt2: [
+    ...Array.from({ length: 12 }, (_, i) => `images/appartement-2/photo-${String(i + 1).padStart(2, "0")}.png`),
+    "images/appartement-2/photo-13.jpeg",
+  ],
+  apt3: Array.from({ length: 14 }, (_, i) => `images/appartement-3/photo-${String(i + 1).padStart(2, "0")}.png`),
+};
+
+function initApartmentPhotoLightbox() {
+  if (typeof Lightbox === "undefined") return;
+  document.querySelectorAll("[data-apartment-gallery]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const apartmentId = btn.getAttribute("data-apartment-gallery");
+      const urls = APARTMENT_PHOTO_SETS[apartmentId];
+      if (urls) Lightbox.open(urls, 0);
+    });
+  });
+}
+
 function buildFAQItem(item) {
   return `
     <div class="faq-item">
@@ -160,6 +195,8 @@ document.addEventListener("DOMContentLoaded", () => {
   setFooterYear();
   renderTestimonials();
   initGalleryFilters();
+  initGalleryLightbox();
+  initApartmentPhotoLightbox();
   renderFAQ();
   updateWhatsappLinks();
   initCookieBanner();

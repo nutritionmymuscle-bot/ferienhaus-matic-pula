@@ -46,10 +46,12 @@
     </nav>
     <div class="header-actions">
       <div class="lang-switcher" role="group" data-i18n-aria-label="common.langSwitcherLabel">
-        <button type="button" data-lang-switch="fr">FR</button>
-        <button type="button" data-lang-switch="de">DE</button>
-        <button type="button" data-lang-switch="en">EN</button>
-        <button type="button" data-lang-switch="hr">HR</button>
+        <select data-lang-select>
+          <option value="fr">FR — Français</option>
+          <option value="de">DE — Deutsch</option>
+          <option value="en">EN — English</option>
+          <option value="hr">HR — Hrvatski</option>
+        </select>
       </div>
       <a href="reservation.html" class="btn btn--primary" data-i18n="common.bookNow"></a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -75,10 +77,12 @@
         <span class="kicker" data-i18n="reservation.apartmentSelectorKicker"></span>
         <h2 class="section-title" style="font-size:1.4rem;" data-i18n="reservation.apartmentSelectorTitle"></h2>
       </div>
-      <div class="apartment-tabs" role="tablist" aria-label="Choix de l'appartement">
-        <button type="button" data-apartment-tab="apt1" role="tab" data-i18n="apartments.apt1.name"></button>
-        <button type="button" data-apartment-tab="apt2" role="tab" data-i18n="apartments.apt2.name"></button>
-        <button type="button" data-apartment-tab="apt3" role="tab" data-i18n="apartments.apt3.name"></button>
+      <div class="apartment-select-wrap">
+        <select id="apartmentSelect" aria-label="Choix de l'appartement">
+          <option value="apt1" data-i18n="apartments.apt1.name"></option>
+          <option value="apt2" data-i18n="apartments.apt2.name"></option>
+          <option value="apt3" data-i18n="apartments.apt3.name"></option>
+        </select>
       </div>
 
       <div class="booking-layout">
