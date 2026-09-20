@@ -8,13 +8,13 @@
 <meta name="description" content="Découvrez les avis de nos voyageurs sur le Ferienhaus Matić Pula : familles et couples partagent leur expérience à Pula, Istrie.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ferienhaus Matić Pula">
-<meta property="og:title" content="Avis clients — Ferienhaus Matić Pula">
-<meta property="og:description" content="Familles et couples partagent leur expérience au Ferienhaus Matić Pula, à Pula, Istrie.">
+<meta property="og:title" content="Recenzije gostiju — Ferienhaus Matić Pula">
+<meta property="og:description" content="Obitelji i parovi dijele svoje dojmove o boravku u Ferienhaus Matić Pula, u Puli, Istra.">
 <meta property="og:image" content="https://www.ferienhaus-matic-pula.com/images/og-cover.jpg">
 <meta property="og:url" content="https://www.ferienhaus-matic-pula.com/temoignages.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Avis clients — Ferienhaus Matić Pula">
-<meta name="twitter:description" content="Ce que nos voyageurs disent de leur séjour à Pula, Istrie.">
+<meta name="twitter:title" content="Recenzije gostiju — Ferienhaus Matić Pula">
+<meta name="twitter:description" content="Što naši gosti kažu o svom boravku u Puli, Istra.">
 <meta name="twitter:image" content="https://www.ferienhaus-matic-pula.com/images/og-cover.jpg">
 <link rel="canonical" href="https://www.ferienhaus-matic-pula.com/temoignages.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,6 +83,55 @@
   <section class="section">
     <div class="container">
       <div class="grid grid--3" data-testimonials-grid></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:640px;">
+      <div class="booking-panel">
+        <span class="kicker" data-i18n="reviewForm.kicker"></span>
+        <h2 data-i18n="reviewForm.title"></h2>
+        <p data-i18n="reviewForm.introText"></p>
+        <form id="reviewForm" novalidate>
+          <div class="visually-hidden" aria-hidden="true" style="position:absolute;left:-9999px;">
+            <label for="reviewWebsite">Website</label>
+            <input type="text" id="reviewWebsite" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-field">
+            <label for="reviewName" data-i18n="reviewForm.nameLabel"></label>
+            <input type="text" id="reviewName" name="fullName" autocomplete="name">
+            <span class="field-error"></span>
+          </div>
+          <div class="form-field">
+            <label for="reviewCountry" data-i18n="reviewForm.countryLabel"></label>
+            <input type="text" id="reviewCountry" name="country" data-i18n-placeholder="reviewForm.countryPlaceholder">
+          </div>
+          <div class="form-field">
+            <label for="reviewEmail" data-i18n="reviewForm.emailLabel"></label>
+            <input type="email" id="reviewEmail" name="email" autocomplete="email">
+            <span class="field-error"></span>
+          </div>
+          <div class="form-field">
+            <label for="reviewRating" data-i18n="reviewForm.ratingLabel"></label>
+            <select id="reviewRating" name="rating">
+              <option value="" data-i18n="reviewForm.ratingPlaceholder"></option>
+              <option value="5" data-i18n="reviewForm.rating5"></option>
+              <option value="4" data-i18n="reviewForm.rating4"></option>
+              <option value="3" data-i18n="reviewForm.rating3"></option>
+              <option value="2" data-i18n="reviewForm.rating2"></option>
+              <option value="1" data-i18n="reviewForm.rating1"></option>
+            </select>
+            <span class="field-error"></span>
+          </div>
+          <div class="form-field">
+            <label for="reviewText" data-i18n="reviewForm.textLabel"></label>
+            <textarea id="reviewText" name="text" rows="5" data-i18n-placeholder="reviewForm.textPlaceholder"></textarea>
+            <span class="field-error"></span>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block" id="reviewSubmitBtn" data-i18n="reviewForm.submitButton"></button>
+          <div class="form-notice" id="reviewFormNotice" hidden></div>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -164,6 +213,10 @@
 <script src="js/translations.js"></script>
 <script src="js/i18n.js"></script>
 <script src="js/theme.js"></script>
+<script src="js/form-utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js" integrity="sha384-SALc35EccAf6RzGw4iNsyj7kTPr33K7RoGzYu+7heZhT8s0GZouafRiCg1qy44AS" crossorigin="anonymous"></script>
+<script src="js/emailjs-config.js"></script>
+<script src="js/review-form.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -145,6 +145,7 @@ const TRANSLATIONS = {
       categoryLiving: "Wohnzimmer & Küche",
       categoryBathroom: "Badezimmer",
       categoryView: "Aussicht & Umgebung",
+      categoryBarbecue: "Grillbereich",
       placeholderCaption: "Foto folgt"
     },
     apartments: {
@@ -292,6 +293,34 @@ const TRANSLATIONS = {
         { name: "Conor & Aoife", country: "Irland", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
         { name: "Zsófia & Bence", country: "Ungarn", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
+    },
+    reviewForm: {
+      kicker: "Ihre Meinung zählt",
+      title: "Bewertung hinterlassen",
+      introText: "Sie waren bereits bei uns zu Gast? Teilen Sie Ihre Erfahrung mit zukünftigen Reisenden. Ihre Bewertung wird von uns geprüft und anschließend auf dieser Seite veröffentlicht.",
+      nameLabel: "Vollständiger Name",
+      countryLabel: "Land (optional)",
+      countryPlaceholder: "Z. B. Deutschland",
+      emailLabel: "E-Mail-Adresse (optional)",
+      ratingLabel: "Ihre Bewertung",
+      ratingPlaceholder: "Bitte wählen…",
+      rating5: "★★★★★ – Ausgezeichnet",
+      rating4: "★★★★ – Sehr gut",
+      rating3: "★★★ – Gut",
+      rating2: "★★ – Ausreichend",
+      rating1: "★ – Enttäuschend",
+      textLabel: "Ihr Erfahrungsbericht",
+      textPlaceholder: "Erzählen Sie uns von Ihrem Aufenthalt…",
+      submitButton: "Bewertung absenden",
+      submitting: "Wird gesendet…",
+      successMessage: "Vielen Dank für Ihre Bewertung! Wir prüfen sie und veröffentlichen sie in Kürze auf dieser Seite.",
+      errorMessage: "Ihre Bewertung konnte derzeit nicht gesendet werden. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.",
+      demoModeNotice: "Demomodus: Richten Sie EmailJS ein (siehe README), um Bewertungen tatsächlich zu erhalten.",
+      clientConfirmationSubject: "Ihre Bewertung ist bei uns eingegangen — Ferienhaus Matić Pula",
+      clientConfirmationBody: "Hallo {name},\n\nvielen Dank für Ihre Bewertung! Wir prüfen sie und veröffentlichen sie in Kürze auf unserer Seite.\n\nBis bald,\nDie Familie Matić\nFerienhaus Matić Pula",
+      validationRequired: "Dieses Feld ist erforderlich",
+      validationEmail: "Ungültige E-Mail-Adresse",
+      validationRating: "Bitte wählen Sie eine Bewertung"
     },
     contact: {
       kicker: "Kontakt",
@@ -575,6 +604,7 @@ const TRANSLATIONS = {
       categoryLiving: "Living room & kitchen",
       categoryBathroom: "Bathrooms",
       categoryView: "View & surroundings",
+      categoryBarbecue: "BBQ area",
       placeholderCaption: "Photo coming soon"
     },
     apartments: {
@@ -722,6 +752,34 @@ const TRANSLATIONS = {
         { name: "Conor & Aoife", country: "Ireland", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
         { name: "Zsófia & Bence", country: "Hungary", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
+    },
+    reviewForm: {
+      kicker: "Your opinion matters",
+      title: "Leave a review",
+      introText: "Already stayed with us? Share your experience with future guests. Your review will be checked by us and then published on this page.",
+      nameLabel: "Full name",
+      countryLabel: "Country (optional)",
+      countryPlaceholder: "E.g. Germany",
+      emailLabel: "Email address (optional)",
+      ratingLabel: "Your rating",
+      ratingPlaceholder: "Please choose…",
+      rating5: "★★★★★ – Excellent",
+      rating4: "★★★★ – Very good",
+      rating3: "★★★ – Good",
+      rating2: "★★ – Fair",
+      rating1: "★ – Poor",
+      textLabel: "Your review",
+      textPlaceholder: "Tell us about your stay…",
+      submitButton: "Submit review",
+      submitting: "Submitting…",
+      successMessage: "Thank you for your review! We'll check it and publish it on this page shortly.",
+      errorMessage: "We couldn't send your review right now. Please try again or contact us directly.",
+      demoModeNotice: "Demo mode: set up EmailJS (see README) to actually receive reviews.",
+      clientConfirmationSubject: "We've received your review — Ferienhaus Matić Pula",
+      clientConfirmationBody: "Hello {name},\n\nThank you for your review! We will check it and publish it on our page shortly.\n\nSee you soon,\nThe Matić family\nFerienhaus Matić Pula",
+      validationRequired: "This field is required",
+      validationEmail: "Invalid email address",
+      validationRating: "Please select a rating"
     },
     contact: {
       kicker: "Contact",
@@ -1005,6 +1063,7 @@ const TRANSLATIONS = {
       categoryLiving: "Dnevni boravak i kuhinja",
       categoryBathroom: "Kupaonice",
       categoryView: "Pogled i okolica",
+      categoryBarbecue: "Prostor za roštilj",
       placeholderCaption: "Fotografija uskoro"
     },
     apartments: {
@@ -1152,6 +1211,34 @@ const TRANSLATIONS = {
         { name: "Conor & Aoife", country: "Irska", rating: 5, text: "A brilliant stay from start to finish. The apartment was spotless and the pool area was a great spot to unwind every evening." },
         { name: "Zsófia & Bence", country: "Mađarska", rating: 4, text: "Csodálatos helyen laktunk, közel a tengerparthoz. Az apartman tiszta és kényelmes volt, a medence pedig igazi kikapcsolódás." }
       ]
+    },
+    reviewForm: {
+      kicker: "Vaše mišljenje je važno",
+      title: "Ostavite recenziju",
+      introText: "Već ste boravili kod nas? Podijelite svoje iskustvo s budućim gostima. Vašu recenziju ćemo provjeriti i zatim objaviti na ovoj stranici.",
+      nameLabel: "Ime i prezime",
+      countryLabel: "Zemlja (neobavezno)",
+      countryPlaceholder: "Npr. Njemačka",
+      emailLabel: "Email adresa (neobavezno)",
+      ratingLabel: "Vaša ocjena",
+      ratingPlaceholder: "Odaberite…",
+      rating5: "★★★★★ – Izvrsno",
+      rating4: "★★★★ – Vrlo dobro",
+      rating3: "★★★ – Dobro",
+      rating2: "★★ – Zadovoljavajuće",
+      rating1: "★ – Loše",
+      textLabel: "Vaša recenzija",
+      textPlaceholder: "Ispričajte nam o svom boravku…",
+      submitButton: "Pošalji recenziju",
+      submitting: "Slanje u tijeku…",
+      successMessage: "Hvala na recenziji! Provjerit ćemo je i uskoro objaviti na ovoj stranici.",
+      errorMessage: "Trenutno nije moguće poslati vašu recenziju. Pokušajte ponovno ili nas kontaktirajte izravno.",
+      demoModeNotice: "Demo način rada: postavite EmailJS (pogledajte README) kako biste stvarno primali recenzije.",
+      clientConfirmationSubject: "Vaša recenzija je zaprimljena — Ferienhaus Matić Pula",
+      clientConfirmationBody: "Pozdrav {name},\n\nHvala na recenziji! Provjerit ćemo je i uskoro objaviti na našoj stranici.\n\nDo skorog viđenja,\nObitelj Matić\nFerienhaus Matić Pula",
+      validationRequired: "Ovo polje je obavezno",
+      validationEmail: "Nevažeća email adresa",
+      validationRating: "Molimo odaberite ocjenu"
     },
     contact: {
       kicker: "Kontakt",
